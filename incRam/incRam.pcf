@@ -1,0 +1,27 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Fri Dec 09 15:38:22 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+PIN
+        datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_pins<32>
+        = BEL
+        "datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram"
+        PINNAME CLKARDCLK;
+PIN
+        datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_pins<33>
+        = BEL
+        "datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram"
+        PINNAME CLKBWRCLK;
+TIMEGRP clk = BEL "controller/current_state_FSM_FFd2" BEL
+        "controller/current_state_FSM_FFd1" BEL "datapath/CNT/value_0" BEL
+        "datapath/CNT/value_1" BEL "datapath/CNT/value_2" BEL
+        "datapath/CNT/value_3" BEL "datapath/CNT/value_4" BEL
+        "cuB/current_state_1" BEL "cuB/current_state_0" BEL "clk_BUFGP/BUFG"
+        BEL "cuB/current_state_1_1" PIN
+        "datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_pins<32>"
+        PIN
+        "datapath/MEM/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM18.ram_pins<33>";
+TS_clk = PERIOD TIMEGRP "clk" 5 ns HIGH 50%;
+SCHEMATIC END;
+

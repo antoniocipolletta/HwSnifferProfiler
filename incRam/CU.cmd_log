@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment/incRam/CU.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment/incRam/CU.syr" 

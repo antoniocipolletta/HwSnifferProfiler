@@ -1,0 +1,8 @@
+vhdl work "mux2_parallelism.vhd"
+vhdl work "ipcore_dir/ram.vhd"
+vhdl work "inc.vhd"
+vhdl work "down_counter_5.vhd"
+vhdl work "DP.vhd"
+vhdl work "CU.vhd"
+vhdl work "controllerB.vhd"
+vhdl work "incRam.vhd"

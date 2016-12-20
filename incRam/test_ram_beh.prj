@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/ram.vhd"
+vhdl work "test_ram.vhd"
