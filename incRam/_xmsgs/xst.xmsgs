@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="1336" delta="old" > (*) More than 100% of Device resources are used
+<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
 </msg>
 
 </messages>

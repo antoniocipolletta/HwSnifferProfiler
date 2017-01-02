@@ -1,1 +1,2 @@
-work	"/home/cipolletta/Documenti/SSDS/assignment/incRam/ipcore_dir/LUT_rom.vhd"
+work	"D_FF.vhd"
+work	"MISR.vhd"

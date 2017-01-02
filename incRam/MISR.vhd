@@ -29,7 +29,7 @@ BEGIN
 	
 	G: FOR i IN 0 TO 128 GENERATE
 	
-		G0: IF i=0 GENERATE
+		G0: IF i = 0 GENERATE
 			feedback(0) <= d(0) XOR sign_s(128);
 			ff_0: D_FF PORT MAP (clk => clk,
 										rst_n => rst_n,
@@ -38,7 +38,7 @@ BEGIN
 		END GENERATE G0;
 		
 		GE: IF i > 0 AND (I MOD 2) = 0 GENERATE
-			feedback(i) <= d(i) XOR sign_s(128) XOR sign_s(i-1);
+			feedback(i) <= d(i) XOR sign_s(i-1) XOR sign_s(128);
 			ff_e: D_FF PORT MAP (clk => clk,
 										rst_n => rst_n,
 										d => feedback(i),
@@ -50,7 +50,7 @@ BEGIN
 			ff_o: D_FF PORT MAP (clk => clk,
 										rst_n => rst_n,
 										d => feedback(i),
-										q => sign_s(i)); 
+										q => sign_s(i));  
 		END GENERATE GO;
 
 	END  GENERATE G;

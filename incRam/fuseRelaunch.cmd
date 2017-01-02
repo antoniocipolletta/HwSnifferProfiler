@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/cipolletta/Documenti/SSDS/assignment/incRam/test3_isim_beh.exe" -prj "/home/cipolletta/Documenti/SSDS/assignment/incRam/test3_beh.prj" "work.test3" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/brb/lapo/incRam/MISR_test_isim_beh.exe" -prj "/home/brb/lapo/incRam/MISR_test_beh.prj" "work.MISR_test" 
