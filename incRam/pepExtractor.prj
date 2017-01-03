@@ -1,2 +1,8 @@
 work	"D_FF.vhd"
 work	"MISR.vhd"
+work	"down_counter.vhd"
+work	"equality_comparator.vhd"
+work	"fault_checker.vhd"
+work	"golden_bus_ROM.vhd"
+work	"golden_control_ROM.vhd"
+work	"up_counter.vhd"

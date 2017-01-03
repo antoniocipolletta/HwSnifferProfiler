@@ -8,7 +8,6 @@ ENTITY equality_comparator IS
 			b: IN std_logic_vector(N-1 DOWNTO 0);	--second inputs
 			cmp: IN std_logic;							--compare	
 			ack: IN std_logic;							--ack (to clear eq_n value)
-			rst_n: IN std_logic;							--async reset active low 
 			eq_n: OUT std_logic);						--equality output, high only if the 2 inputs are different
 END equality_comparator;
 
@@ -20,20 +19,12 @@ BEGIN
 
 	eq_n <= NOT(eq_s);
 
-	PROCESS(cmp, rst_n, ack,  a, b)
+	PROCESS(cmp, ack, a, b)
 	BEGIN
-		IF (rst_n = '0') THEN
-			eq_s <= '1';
-		ELSE
-			IF (cmp = '1' AND cmp'EVENT) THEN
-				IF (ack = '1') THEN
-					eq_s <= '1';
-				ELSE
-					IF (a /= b) THEN
-						eq_s <= '0';
-					END IF;
-				END IF;
-			END IF;
+		IF (ack = '0') THEN
+			eq_s <= '1';									--clear eq value
+		ELSIF (cmp = '1' AND cmp'EVENT AND a /= b) THEN  
+			eq_s <= '0';
 		END IF;
 	END PROCESS;
 

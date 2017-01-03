@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "/home/brb/lapo/incRam/fault_checker.xst" -ofn "/home/brb/lapo/incRam/fault_checker.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo/incRam/fault_checker.xst" -ofn "/home/brb/lapo/incRam/fault_checker.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo/incRam/fault_checker.xst" -ofn "/home/brb/lapo/incRam/fault_checker.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo/incRam/fault_checker.xst" -ofn "/home/brb/lapo/incRam/fault_checker.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo/incRam/fault_checker.xst" -ofn "/home/brb/lapo/incRam/fault_checker.syr" 

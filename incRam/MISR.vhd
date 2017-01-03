@@ -9,7 +9,7 @@ ENTITY MISR IS
 	);
 END MISR;
 
-ARCHITECTURE Behavioral OF MISR IS
+ARCHITECTURE Structural OF MISR IS
 
 	COMPONENT D_FF IS
 	PORT(
@@ -55,4 +55,4 @@ BEGIN
 
 	END  GENERATE G;
 
-END Behavioral;
+END Structural;

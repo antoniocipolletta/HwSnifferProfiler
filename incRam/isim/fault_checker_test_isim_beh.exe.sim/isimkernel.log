@@ -1,0 +1,5 @@
+Command line:
+   fault_checker_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  48364
