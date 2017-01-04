@@ -48,7 +48,7 @@
 COMPONENT golden_control_ROM
   PORT (
     clka : IN STD_LOGIC;
-    addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
   );
 END COMPONENT;

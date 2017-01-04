@@ -89,7 +89,7 @@ USE UNISIM.VCOMPONENTS.ALL;
 ENTITY golden_control_ROM_exdes IS
   PORT (
       --Inputs - Port A
-    ADDRA          : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
   
     DOUTA          : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
     CLKA       : IN STD_LOGIC
@@ -112,7 +112,7 @@ ARCHITECTURE xilinx OF golden_control_ROM_exdes IS
   COMPONENT golden_control_ROM IS
   PORT (
       --Port A
-    ADDRA      : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
   
     DOUTA      : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
 

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/brb/lapo/incRam/equality_comparator.vhd";
+static const char *ng0 = "/home/brb/lapo2/incRam/equality_comparator.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_374109322130769762_503743352(char *, unsigned char );
@@ -86,7 +86,7 @@ LAB0:    xsi_set_current_line(24, ng0);
     t1 = (t0 + 1512U);
     t2 = *((char **)t1);
     t3 = *((unsigned char *)t2);
-    t4 = (t3 == (unsigned char)2);
+    t4 = (t3 == (unsigned char)3);
     if (t4 != 0)
         goto LAB2;
 

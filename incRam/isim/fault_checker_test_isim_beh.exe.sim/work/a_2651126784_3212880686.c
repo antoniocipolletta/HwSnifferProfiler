@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/brb/lapo/incRam/up_counter.vhd";
+static const char *ng0 = "/home/brb/lapo2/incRam/up_counter.vhd";
 extern char *IEEE_P_1242562249;
 
 char *ieee_p_1242562249_sub_1006216973935652998_1035706684(char *, char *, char *, char *, int );
@@ -46,7 +46,7 @@ LAB3:    t1 = (t0 + 1672U);
     t4 = *((char **)t3);
     t5 = (t4 + 56U);
     t6 = *((char **)t5);
-    memcpy(t6, t2, 16U);
+    memcpy(t6, t2, 10U);
     xsi_driver_first_trans_fast_port(t1);
 
 LAB2:    t7 = (t0 + 3392);
@@ -108,16 +108,16 @@ LAB3:    t1 = (t0 + 3408);
 
 LAB1:    return;
 LAB2:    xsi_set_current_line(23, ng0);
-    t1 = xsi_get_transient_memory(16U);
-    memset(t1, 0, 16U);
+    t1 = xsi_get_transient_memory(10U);
+    memset(t1, 0, 10U);
     t5 = t1;
-    memset(t5, (unsigned char)2, 16U);
+    memset(t5, (unsigned char)2, 10U);
     t6 = (t0 + 3552);
     t7 = (t6 + 56U);
     t8 = *((char **)t7);
     t9 = (t8 + 56U);
     t10 = *((char **)t9);
-    memcpy(t10, t1, 16U);
+    memcpy(t10, t1, 10U);
     xsi_driver_first_trans_fast(t6);
     goto LAB3;
 
@@ -140,12 +140,12 @@ LAB7:    t1 = (t0 + 992U);
 LAB10:    xsi_set_current_line(26, ng0);
     t5 = (t0 + 1672U);
     t7 = *((char **)t5);
-    t5 = (t0 + 5184U);
+    t5 = (t0 + 5192U);
     t8 = ieee_p_1242562249_sub_1006216973935652998_1035706684(IEEE_P_1242562249, t15, t7, t5, 1);
     t9 = (t15 + 12U);
     t16 = *((unsigned int *)t9);
     t17 = (1U * t16);
-    t18 = (16U != t17);
+    t18 = (10U != t17);
     if (t18 == 1)
         goto LAB13;
 
@@ -154,11 +154,11 @@ LAB14:    t10 = (t0 + 3552);
     t20 = *((char **)t19);
     t21 = (t20 + 56U);
     t22 = *((char **)t21);
-    memcpy(t22, t8, 16U);
+    memcpy(t22, t8, 10U);
     xsi_driver_first_trans_fast(t10);
     goto LAB11;
 
-LAB13:    xsi_size_not_matching(16U, t17, 0);
+LAB13:    xsi_size_not_matching(10U, t17, 0);
     goto LAB14;
 
 }

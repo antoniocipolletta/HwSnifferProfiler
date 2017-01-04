@@ -6,12 +6,12 @@ ENTITY up_counter IS
 	PORT (clk: IN std_logic;
 			cnt: IN std_logic;
 			rst_n: IN std_logic;
-			Q: OUT std_logic_vector(15 DOWNTO 0));
+			Q: OUT std_logic_vector(9 DOWNTO 0));
 END up_counter;
 
 ARCHITECTURE Behavioral OF up_counter IS
 
-	SIGNAL count: unsigned(15 DOWNTO 0);
+	SIGNAL count: unsigned(9 DOWNTO 0);
 
 BEGIN
 

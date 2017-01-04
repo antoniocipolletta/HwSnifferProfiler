@@ -21,7 +21,7 @@ BEGIN
 
 	PROCESS(cmp, ack, a, b)
 	BEGIN
-		IF (ack = '0') THEN
+		IF (ack = '1') THEN
 			eq_s <= '1';									--clear eq value
 		ELSIF (cmp = '1' AND cmp'EVENT AND a /= b) THEN  
 			eq_s <= '0';

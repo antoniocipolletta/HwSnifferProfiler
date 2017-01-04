@@ -20,12 +20,12 @@ ARCHITECTURE behavior OF fault_checker_test IS
     
 
    --Inputs
-   signal dbus : std_logic_vector(63 downto 0) := (others => '0');
-   signal abus : std_logic_vector(63 downto 0) := (others => '0');
-   signal cbus : std_logic := '0';
-   signal sos : std_logic := '0';
-   signal ack : std_logic := '0';
-   signal rst_n : std_logic := '0';
+   signal dbus : std_logic_vector(63 downto 0);
+   signal abus : std_logic_vector(63 downto 0);
+   signal cbus : std_logic;
+   signal sos : std_logic;
+   signal ack : std_logic;
+   signal rst_n : std_logic;
 
  	--Outputs
    signal fault : std_logic;
@@ -64,7 +64,28 @@ BEGIN
 		rst_n <= '0';
       wait for sos_period;
 		rst_n <= '1';
+		ack <= '0';
+		abus <= x"0000000000000000";
+		dbus <= x"0000000000000000";
+		cbus <= '0';
       wait for sos_period;
+		abus <= x"0000000000000000";
+		dbus <= x"00000000000000A0";
+		cbus <= '0';
+      wait for sos_period;
+		abus <= x"0000000000000000";
+		dbus <= x"0000000000000000";
+		cbus <= '0';
+      wait for sos_period;
+		abus <= x"0000000000000000";
+		dbus <= x"0000000000000000";
+		cbus <= '0';
+      wait for sos_period;
+		
+		wait for 700 ns;
+		ack <= '1';
+		wait for sos_period;
+		ack <= '0';
 
 
       wait;

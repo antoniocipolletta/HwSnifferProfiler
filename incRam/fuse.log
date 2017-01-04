@@ -1,21 +1,21 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/brb/lapo/incRam/fault_checker_test_isim_beh.exe -prj /home/brb/lapo/incRam/fault_checker_test_beh.prj work.fault_checker_test 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/brb/lapo2/incRam/fault_checker_test_isim_beh.exe" -prj "/home/brb/lapo2/incRam/fault_checker_test_beh.prj" "work.fault_checker_test" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/brb/lapo/incRam/D_FF.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/up_counter.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/MISR.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/golden_control_ROM.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/golden_bus_ROM.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/equality_comparator.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/down_counter.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/fault_checker.vhd" into library work
-Parsing VHDL file "/home/brb/lapo/incRam/fault_checker_test.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/D_FF.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/up_counter.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/MISR.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/golden_control_ROM.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/golden_bus_ROM.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/equality_comparator.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/down_counter.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/fault_checker.vhd" into library work
+Parsing VHDL file "/home/brb/lapo2/incRam/fault_checker_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 109428 KB
-Fuse CPU Usage: 1830 ms
+Fuse Memory Usage: 103008 KB
+Fuse CPU Usage: 1840 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
@@ -41,9 +41,9 @@ Compiling architecture behavioral of entity equality_comparator [\equality_compa
 Compiling architecture structural of entity fault_checker [fault_checker_default]
 Compiling architecture behavior of entity fault_checker_test
 Time Resolution for simulation is 1ps.
-Waiting for 7 sub-compilation(s) to finish...
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 40 VHDL Units
-Built simulation executable /home/brb/lapo/incRam/fault_checker_test_isim_beh.exe
-Fuse Memory Usage: 427676 KB
-Fuse CPU Usage: 4680 ms
-GCC CPU Usage: 6800 ms
+Built simulation executable /home/brb/lapo2/incRam/fault_checker_test_isim_beh.exe
+Fuse Memory Usage: 421848 KB
+Fuse CPU Usage: 2250 ms
+GCC CPU Usage: 250 ms

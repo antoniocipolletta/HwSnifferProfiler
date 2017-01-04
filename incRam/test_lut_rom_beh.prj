@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/LUT_rom_2.vhd"
+vhdl work "test_lut_rom.vhd"

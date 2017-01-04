@@ -24,7 +24,7 @@ ARCHITECTURE Structural OF fault_checker IS
 	COMPONENT golden_bus_ROM IS
 	  PORT (
 		 clka : IN STD_LOGIC;
-		 addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		 douta : OUT STD_LOGIC_VECTOR(63 DOWNTO 0)
 	  );
 	END COMPONENT;
@@ -32,7 +32,7 @@ ARCHITECTURE Structural OF fault_checker IS
 	COMPONENT golden_control_ROM IS
 	  PORT (
 		 clka : IN STD_LOGIC;
-		 addra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
 		 douta : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
 	  );
 	END COMPONENT;
@@ -57,14 +57,14 @@ ARCHITECTURE Structural OF fault_checker IS
 		PORT (clk: IN std_logic;
 				cnt: IN std_logic;
 				rst_n: IN std_logic;
-				Q: OUT std_logic_vector(15 DOWNTO 0));
+				Q: OUT std_logic_vector(9 DOWNTO 0));
 	END COMPONENT;
 	
 	SIGNAL sign_s, golden_s, sample_s: std_logic_vector(128 downto 0);
 	SIGNAL abus_golden, dbus_golden: std_logic_vector(63 downto 0);
 	SIGNAL cbus_golden: std_logic_vector(0 DOWNTO 0);
 	SIGNAL tc_s: std_logic;
-	SIGNAL addr_s: std_logic_vector(15 downto 0);
+	SIGNAL addr_s: std_logic_vector(9 downto 0);
 	
 	SIGNAL ack_s: std_logic;
 	

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/brb/lapo/incRam/D_FF.vhd";
+static const char *ng0 = "/home/brb/lapo2/incRam/D_FF.vhd";
 
 
 
