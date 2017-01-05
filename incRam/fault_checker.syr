@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> 
 Reading design: fault_checker.prj
@@ -120,12 +120,9 @@ Parsing architecture <Behavioral> of entity <up_counter>.
 Parsing VHDL file "/home/brb/lapo2/incRam/MISR.vhd" into library work
 Parsing entity <MISR>.
 Parsing architecture <Structural> of entity <misr>.
-Parsing VHDL file "/home/brb/lapo2/incRam/golden_control_ROM.vhd" into library work
-Parsing entity <golden_control_ROM>.
-Parsing architecture <golden_control_ROM_a> of entity <golden_control_rom>.
-Parsing VHDL file "/home/brb/lapo2/incRam/golden_bus_ROM.vhd" into library work
-Parsing entity <golden_bus_ROM>.
-Parsing architecture <golden_bus_ROM_a> of entity <golden_bus_rom>.
+Parsing VHDL file "/home/brb/lapo2/incRam/golden_ROM.vhd" into library work
+Parsing entity <golden_ROM>.
+Parsing architecture <golden_ROM_a> of entity <golden_rom>.
 Parsing VHDL file "/home/brb/lapo2/incRam/equality_comparator.vhd" into library work
 Parsing entity <equality_comparator>.
 Parsing architecture <Behavioral> of entity <equality_comparator>.
@@ -146,9 +143,7 @@ Elaborating entity <MISR> (architecture <Structural>) from library <work>.
 
 Elaborating entity <D_FF> (architecture <Behavioral>) from library <work>.
 
-Elaborating entity <golden_bus_ROM> (architecture <golden_bus_ROM_a>) from library <work>.
-
-Elaborating entity <golden_control_ROM> (architecture <golden_control_ROM_a>) from library <work>.
+Elaborating entity <golden_ROM> (architecture <golden_ROM_a>) from library <work>.
 
 Elaborating entity <down_counter> (architecture <Behavioral>) from library <work>.
 
@@ -163,7 +158,6 @@ Elaborating entity <equality_comparator> (architecture <Behavioral>) with generi
 Synthesizing Unit <fault_checker>.
     Related source file is "/home/brb/lapo2/incRam/fault_checker.vhd".
     Summary:
-	no macro.
 Unit <fault_checker> synthesized.
 
 Synthesizing Unit <MISR>.
@@ -180,11 +174,11 @@ Unit <D_FF> synthesized.
 
 Synthesizing Unit <down_counter>.
     Related source file is "/home/brb/lapo2/incRam/down_counter.vhd".
-    Found 6-bit register for signal <count>.
-    Found 6-bit subtractor for signal <count[5]_GND_9_o_mux_1_OUT> created at line 23.
+    Found 5-bit register for signal <count>.
+    Found 5-bit subtractor for signal <count[4]_GND_8_o_mux_1_OUT> created at line 23.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   6 D-type flip-flop(s).
+	inferred   5 D-type flip-flop(s).
 Unit <down_counter> synthesized.
 
 Synthesizing Unit <up_counter>.
@@ -200,7 +194,7 @@ Synthesizing Unit <equality_comparator>.
     Related source file is "/home/brb/lapo2/incRam/equality_comparator.vhd".
         N = 129
     Found 1-bit register for signal <eq_s>.
-    Found 129-bit comparator equal for signal <n0001> created at line 26
+    Found 129-bit comparator not equal for signal <n0001> created at line 27
     Summary:
 	inferred   1 D-type flip-flop(s).
 	inferred   1 Comparator(s).
@@ -212,15 +206,15 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 1
- 6-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
 # Registers                                            : 132
  1-bit register                                        : 130
  10-bit register                                       : 1
- 6-bit register                                        : 1
+ 5-bit register                                        : 1
 # Comparators                                          : 1
- 129-bit comparator equal                              : 1
-# Xors                                                 : 193
- 1-bit xor2                                            : 193
+ 129-bit comparator not equal                          : 1
+# Xors                                                 : 194
+ 1-bit xor2                                            : 194
 
 =========================================================================
 
@@ -228,11 +222,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Reading core <golden_bus_ROM.ngc>.
-Reading core <golden_control_ROM.ngc>.
-Loading core <golden_bus_ROM> for timing and area information for instance <golden_rom_abus>.
-Loading core <golden_bus_ROM> for timing and area information for instance <golden_rom_dbus>.
-Loading core <golden_control_ROM> for timing and area information for instance <golden_rom_cbus>.
+Reading core <golden_ROM.ngc>.
+Loading core <golden_ROM> for timing and area information for instance <gld_rom>.
 
 Synthesizing (advanced) Unit <down_counter>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
@@ -248,13 +239,13 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Counters                                             : 2
  10-bit up counter                                     : 1
- 6-bit down counter                                    : 1
+ 5-bit down counter                                    : 1
 # Registers                                            : 130
  Flip-Flops                                            : 130
 # Comparators                                          : 1
- 129-bit comparator equal                              : 1
-# Xors                                                 : 193
- 1-bit xor2                                            : 193
+ 129-bit comparator not equal                          : 1
+# Xors                                                 : 194
+ 1-bit xor2                                            : 194
 
 =========================================================================
 
@@ -276,8 +267,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 146
- Flip-Flops                                            : 146
+# Registers                                            : 145
+ Flip-Flops                                            : 145
 
 =========================================================================
 
@@ -300,23 +291,23 @@ Top Level Output File Name         : fault_checker.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 265
-#      GND                         : 4
+# BELS                             : 258
+#      GND                         : 2
 #      INV                         : 4
 #      LUT1                        : 8
-#      LUT2                        : 68
+#      LUT2                        : 67
 #      LUT3                        : 65
-#      LUT4                        : 2
-#      LUT5                        : 1
-#      LUT6                        : 46
-#      MUXCY                       : 53
-#      VCC                         : 4
+#      LUT4                        : 1
+#      LUT5                        : 2
+#      LUT6                        : 45
+#      MUXCY                       : 52
+#      VCC                         : 2
 #      XORCY                       : 10
-# FlipFlops/Latches                : 146
+# FlipFlops/Latches                : 145
 #      FDC                         : 139
-#      FDP                         : 7
-# RAMS                             : 5
-#      RAMB18E1                    : 1
+#      FDP                         : 5
+#      FDPE                        : 1
+# RAMS                             : 4
 #      RAMB36E1                    : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -331,24 +322,24 @@ Selected Device : 6vlx75tff484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             146  out of  93120     0%  
- Number of Slice LUTs:                  194  out of  46560     0%  
-    Number used as Logic:               194  out of  46560     0%  
+ Number of Slice Registers:             145  out of  93120     0%  
+ Number of Slice LUTs:                  192  out of  46560     0%  
+    Number used as Logic:               192  out of  46560     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    196
-   Number with an unused Flip Flop:      50  out of    196    25%  
-   Number with an unused LUT:             2  out of    196     1%  
-   Number of fully used LUT-FF pairs:   144  out of    196    73%  
-   Number of unique control sets:         4
+ Number of LUT Flip Flop pairs used:    193
+   Number with an unused Flip Flop:      48  out of    193    24%  
+   Number with an unused LUT:             1  out of    193     0%  
+   Number of fully used LUT-FF pairs:   144  out of    193    74%  
+   Number of unique control sets:         3
 
 IO Utilization: 
  Number of IOs:                         133
  Number of bonded IOBs:                 133  out of    240    55%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                5  out of    156     3%  
-    Number using Block RAM only:          5
+ Number of Block RAM/FIFO:                4  out of    156     2%  
+    Number using Block RAM only:          4
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
@@ -369,33 +360,32 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-sos                                | BUFGP                  | 135   |
-tc_s(tc_s1:O)                      | NONE(*)(up_cnt/count_0)| 16    |
------------------------------------+------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                           | Load  |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+sos                                | BUFGP                                                                                                                                           | 135   |
+tc_s(dwn_cnt/tc<4>1:O)             | NONE(*)(up_cnt/count_0)                                                                                                                         | 10    |
+rom_clk(Mxor_rom_clk_xo<0>1:O)     | NONE(*)(gld_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
+-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                               | Buffer(FF name)                                                                                                                                        | Load  |
----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-golden_rom_abus/N1(golden_rom_abus/XST_GND:G)| NONE(golden_rom_abus/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
-golden_rom_cbus/N1(golden_rom_cbus/XST_GND:G)| NONE(golden_rom_cbus/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram)| 4     |
-golden_rom_dbus/N1(golden_rom_dbus/XST_GND:G)| NONE(golden_rom_dbus/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                              | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------+
+gld_rom/N1(gld_rom/XST_GND:G)      | NONE(gld_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 8     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.229ns (Maximum Frequency: 448.571MHz)
-   Minimum input arrival time before clock: 1.493ns
+   Minimum period: 2.103ns (Maximum Frequency: 475.557MHz)
+   Minimum input arrival time before clock: 1.085ns
    Maximum output required time after clock: 0.916ns
    Maximum combinational path delay: No path found
 
@@ -405,78 +395,126 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sos'
-  Clock period: 1.714ns (frequency: 583.587MHz)
-  Total number of paths / destination ports: 988 / 264
+  Clock period: 2.103ns (frequency: 475.557MHz)
+  Total number of paths / destination ports: 343 / 136
 -------------------------------------------------------------------------
-Delay:               1.714ns (Levels of Logic = 2)
-  Source:            dwn_cnt/count_4 (FF)
-  Destination:       misr_c/G[0].G0.ff_0/int (FF)
+Delay:               2.103ns (Levels of Logic = 44)
+  Source:            misr_c/G[2].GE.ff_e/int (FF)
+  Destination:       eq_cmp/eq_s (FF)
   Source Clock:      sos rising
   Destination Clock: sos rising
 
-  Data Path: dwn_cnt/count_4 to misr_c/G[0].G0.ff_0/int
+  Data Path: misr_c/G[2].GE.ff_e/int to eq_cmp/eq_s
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              4   0.280   0.310  dwn_cnt/count_4 (dwn_cnt/count_4)
-     LUT2:I1->O            1   0.053   0.296  misr_c/G[0].G0.ff_0/rst_n_inv_SW0 (N01)
-     LUT6:I5->O          129   0.053   0.401  misr_c/G[0].G0.ff_0/rst_n_inv (misr_c/G[0].G0.ff_0/rst_n_inv)
-     FDC:CLR                   0.320          misr_c/G[0].G0.ff_0/int
+     FDC:C->Q              2   0.280   0.438  misr_c/G[2].GE.ff_e/int (misr_c/G[2].GE.ff_e/int)
+     LUT6:I3->O            1   0.053   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_lut<0> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_lut<0>)
+     MUXCY:S->O            1   0.219   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<0> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<1> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<2> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<3> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<4> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<5> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<6> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<7> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<8> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<9> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<10> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<11> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<12> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<13> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<14> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<15> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<16> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<17> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<18> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<19> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<19>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<20> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<20>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<21> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<21>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<22> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<22>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<23> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<23>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<24> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<24>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<25> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<25>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<26> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<26>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<27> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<27>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<28> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<28>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<29> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<29>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<30> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<30>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<31> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<31>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<32> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<32>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<33> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<33>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<34> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<34>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<35> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<35>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<36> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<36>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<37> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<37>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<38> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<38>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<39> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<39>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<40> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<40>)
+     MUXCY:CI->O           1   0.015   0.000  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<41> (eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<41>)
+     MUXCY:CI->O           1   0.070   0.279  eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<42> (eq_cmp/b[128]_a[128]_not_equal_0_o)
+     FDPE:CE                   0.149          eq_cmp/eq_s
     ----------------------------------------
-    Total                      1.714ns (0.706ns logic, 1.008ns route)
-                                       (41.2% logic, 58.8% route)
+    Total                      2.103ns (1.386ns logic, 0.717ns route)
+                                       (65.9% logic, 34.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'tc_s'
-  Clock period: 2.229ns (frequency: 448.571MHz)
-  Total number of paths / destination ports: 107 / 61
+  Clock period: 1.167ns (frequency: 856.751MHz)
+  Total number of paths / destination ports: 55 / 10
 -------------------------------------------------------------------------
-Delay:               2.229ns (Levels of Logic = 4)
-  Source:            golden_rom_cbus/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (RAM)
-  Destination:       eq_cmp/eq_s (FF)
+Delay:               1.167ns (Levels of Logic = 11)
+  Source:            up_cnt/count_0 (FF)
+  Destination:       up_cnt/count_9 (FF)
   Source Clock:      tc_s rising
   Destination Clock: tc_s rising
 
-  Data Path: golden_rom_cbus/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram to eq_cmp/eq_s
+  Data Path: up_cnt/count_0 to up_cnt/count_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB18E1:CLKARDCLK->DOADO0    1   1.591   0.296  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (douta<0>)
-     end scope: 'golden_rom_cbus:douta<0>'
-     LUT6:I5->O            1   0.053   0.000  eq_cmp/Mcompar_n0001_lut<42> (eq_cmp/Mcompar_n0001_lut<42>)
-     MUXCY:S->O            1   0.219   0.000  eq_cmp/Mcompar_n0001_cy<42> (eq_cmp/Mcompar_n0001_cy<42>)
-     MUXCY:CI->O           1   0.070   0.000  eq_cmp/eq_s_rstpot_cy (eq_cmp/eq_s_rstpot)
-     FDP:D                    -0.012          eq_cmp/eq_s
+     FDC:C->Q              5   0.280   0.298  up_cnt/count_0 (up_cnt/count_0)
+     INV:I->O              1   0.070   0.000  up_cnt/Mcount_count_lut<0>_INV_0 (up_cnt/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.219   0.000  up_cnt/Mcount_count_cy<0> (up_cnt/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<1> (up_cnt/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<2> (up_cnt/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<3> (up_cnt/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<4> (up_cnt/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<5> (up_cnt/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<6> (up_cnt/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  up_cnt/Mcount_count_cy<7> (up_cnt/Mcount_count_cy<7>)
+     MUXCY:CI->O           0   0.015   0.000  up_cnt/Mcount_count_cy<8> (up_cnt/Mcount_count_cy<8>)
+     XORCY:CI->O           1   0.180   0.000  up_cnt/Mcount_count_xor<9> (Result<9>)
+     FDC:D                    -0.012          up_cnt/count_9
     ----------------------------------------
-    Total                      2.229ns (1.933ns logic, 0.296ns route)
-                                       (86.7% logic, 13.3% route)
+    Total                      1.167ns (0.869ns logic, 0.298ns route)
+                                       (74.5% logic, 25.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sos'
-  Total number of paths / destination ports: 264 / 264
+  Total number of paths / destination ports: 265 / 264
 -------------------------------------------------------------------------
-Offset:              1.493ns (Levels of Logic = 3)
+Offset:              1.085ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       misr_c/G[0].G0.ff_0/int (FF)
+  Destination:       dwn_cnt/count_0 (FF)
   Destination Clock: sos rising
 
-  Data Path: rst_n to misr_c/G[0].G0.ff_0/int
+  Data Path: rst_n to dwn_cnt/count_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   0.003   0.367  rst_n_IBUF (rst_n_IBUF)
-     LUT2:I0->O            1   0.053   0.296  misr_c/G[0].G0.ff_0/rst_n_inv_SW0 (N01)
-     LUT6:I5->O          129   0.053   0.401  misr_c/G[0].G0.ff_0/rst_n_inv (misr_c/G[0].G0.ff_0/rst_n_inv)
+     IBUF:I->O             3   0.003   0.289  rst_n_IBUF (rst_n_IBUF)
+     INV:I->O            144   0.070   0.403  rst_n_inv1_INV_0 (misr_c/G[0].G0.ff_0/rst_n_inv)
      FDC:CLR                   0.320          misr_c/G[0].G0.ff_0/int
     ----------------------------------------
-    Total                      1.493ns (0.429ns logic, 1.064ns route)
-                                       (28.7% logic, 71.3% route)
+    Total                      1.085ns (0.393ns logic, 0.692ns route)
+                                       (36.2% logic, 63.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'tc_s'
-  Total number of paths / destination ports: 12 / 11
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
-Offset:              1.030ns (Levels of Logic = 2)
+Offset:              1.085ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
   Destination:       up_cnt/count_0 (FF)
   Destination Clock: tc_s rising
@@ -486,26 +524,26 @@ Offset:              1.030ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             3   0.003   0.289  rst_n_IBUF (rst_n_IBUF)
-     INV:I->O             16   0.070   0.348  rst_n_inv1_INV_0 (rst_n_inv)
+     INV:I->O            144   0.070   0.403  rst_n_inv1_INV_0 (misr_c/G[0].G0.ff_0/rst_n_inv)
      FDC:CLR                   0.320          up_cnt/count_0
     ----------------------------------------
-    Total                      1.030ns (0.393ns logic, 0.637ns route)
-                                       (38.2% logic, 61.8% route)
+    Total                      1.085ns (0.393ns logic, 0.692ns route)
+                                       (36.2% logic, 63.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'tc_s'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sos'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              0.916ns (Levels of Logic = 2)
   Source:            eq_cmp/eq_s (FF)
   Destination:       fault (PAD)
-  Source Clock:      tc_s rising
+  Source Clock:      sos rising
 
   Data Path: eq_cmp/eq_s to fault
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              2   0.280   0.283  eq_cmp/eq_s (eq_cmp/eq_s)
+     FDPE:C->Q             2   0.280   0.283  eq_cmp/eq_s (eq_cmp/eq_s)
      INV:I->O              1   0.070   0.279  eq_cmp/eq_n1_INV_0 (fault_OBUF)
      OBUF:I->O                 0.003          fault_OBUF (fault)
     ----------------------------------------
@@ -517,12 +555,20 @@ Offset:              0.916ns (Levels of Logic = 2)
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock rom_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+tc_s           |    0.939|         |         |         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock sos
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sos            |    1.714|         |         |         |
+sos            |    2.103|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock tc_s
@@ -530,20 +576,19 @@ Clock to Setup on destination clock tc_s
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-sos            |    2.263|         |         |         |
-tc_s           |    2.229|         |         |         |
+tc_s           |    1.167|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.83 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.28 secs
  
 --> 
 
 
-Total memory usage is 415748 kilobytes
+Total memory usage is 415928 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

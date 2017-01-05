@@ -35,7 +35,7 @@ int main(int argc, char **argv)
   data_sign = 0;
   addr_sign = 0;
   cntr_sign = 0;
-  c = 0;
+  c = 1;
   sscanf(argv[2], "%d", &div);
 
   printf( "memory_initialization_radix=16;\n"
@@ -64,8 +64,7 @@ int main(int argc, char **argv)
     data_sign = data_tmp;
     cntr_sign = cntr_tmp;
 
-    c++;
-    if(c >= div){
+    if(c++ >= div-1){
       printf("%x%016lx%016lx,\n", cntr_sign, data_sign, addr_sign);
       c=0;
     }

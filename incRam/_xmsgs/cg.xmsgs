@@ -8,31 +8,31 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;golden_bus_ROM&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;golden_ROM&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;golden_bus_ROM&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;golden_ROM&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;golden_bus_ROM&apos;...</arg>
+<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;golden_ROM&apos;...</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/brb/lapo2/incRam/tmp/_cg/golden_bus_ROM/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/brb/lapo2/incRam/tmp/_cg/golden_ROM/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
 </msg>
 
-<msg type="error" file="sim" num="938" delta="old" >Error while preparing for IP customization
+<msg type="error" file="sim" num="938" delta="new" >Error while preparing for IP customization
 </msg>
 
 <msg type="error" file="sim" num="0" delta="new" >Failed to initialize IP model.
 </msg>
 
-<msg type="warning" file="sim" num="946" delta="old" >Failed to initialise IP Model for ASY schematic symbol
+<msg type="warning" file="sim" num="946" delta="new" >Failed to initialise IP Model for ASY schematic symbol
 </msg>
 
-<msg type="error" file="sim" num="944" delta="old" >Failed to generate ASY schematic symbol.
+<msg type="error" file="sim" num="944" delta="new" >Failed to generate ASY schematic symbol.
 </msg>
 
-<msg type="error" file="sim" num="0" delta="new" >Failed to generate &apos;golden_bus_ROM&apos;.  Failed to initialise IP Model for ASY schematic symbol
+<msg type="error" file="sim" num="0" delta="new" >Failed to generate &apos;golden_ROM&apos;.  Failed to initialise IP Model for ASY schematic symbol
 
 </msg>
 

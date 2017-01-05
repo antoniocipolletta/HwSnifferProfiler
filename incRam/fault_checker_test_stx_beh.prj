@@ -1,0 +1,8 @@
+vhdl isim_temp "D_FF.vhd"
+vhdl isim_temp "up_counter.vhd"
+vhdl isim_temp "MISR.vhd"
+vhdl isim_temp "golden_ROM.vhd"
+vhdl isim_temp "equality_comparator.vhd"
+vhdl isim_temp "down_counter.vhd"
+vhdl isim_temp "fault_checker.vhd"
+vhdl isim_temp "fault_checker_test.vhd"

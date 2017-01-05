@@ -1,5 +1,8 @@
 LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+use ieee.std_logic_1164.ALL;
+use ieee.std_logic_textio.all;
+use ieee.numeric_std.all;
+use std.textio.all;
 
 ENTITY fault_checker_test IS
 END fault_checker_test;
@@ -30,7 +33,7 @@ ARCHITECTURE behavior OF fault_checker_test IS
  	--Outputs
    signal fault : std_logic;
  
-   constant sos_period : time := 10 ns;
+   constant sos_delay : time := 10 ns;
  
 BEGIN
  
@@ -44,50 +47,72 @@ BEGIN
           rst_n => rst_n,
           fault => fault
         );
-
-   -- Clock process definitions
-   sos_process :process
-   begin
-		sos <= '0';
-		wait for sos_period/2;
-		sos <= '1';
-		wait for sos_period/2;
-   end process;
  
 
    -- Stimulus process
-   stim_proc: process
-   begin		
-      wait for 100 ns;	
-		rst_n <= '1';
-      wait for sos_period;
-		rst_n <= '0';
-      wait for sos_period;
-		rst_n <= '1';
-		ack <= '0';
-		abus <= x"0000000000000000";
-		dbus <= x"0000000000000000";
-		cbus <= '0';
-      wait for sos_period;
-		abus <= x"0000000000000000";
-		dbus <= x"00000000000000A0";
-		cbus <= '0';
-      wait for sos_period;
-		abus <= x"0000000000000000";
-		dbus <= x"0000000000000000";
-		cbus <= '0';
-      wait for sos_period;
-		abus <= x"0000000000000000";
-		dbus <= x"0000000000000000";
-		cbus <= '0';
-      wait for sos_period;
+stim_proc: process
+		file input_file: text;
+		variable input_line: line;
 		
-		wait for 700 ns;
-		ack <= '1';
-		wait for sos_period;
+		variable first_line_r_a : character;
+		variable first_line_tick : time := 0ns;
+		variable first_line_r_w: character;
+		variable first_line_addr : std_logic_vector(63 downto 0);
+		variable first_line_data : std_logic_vector(63 downto 0);
+		
+		variable second_line_r_a : character;
+		variable second_line_tick : time := 0ns;
+		variable second_line_r_w: character;
+		variable second_line_addr : std_logic_vector(63 downto 0);
+		variable second_line_data : std_logic_vector(63 downto 0);
+   
+	begin			
+		wait for 20 ns;
+		rst_n <= '1';
+		wait for 20 ns;
+		rst_n <= '0';
 		ack <= '0';
-
-
+		wait for 20 ns;
+		rst_n <= '1';
+		wait for 20 ns;
+	
+		file_open(input_file, "mem_trace.txt", read_mode);
+		
+		while not endfile(input_file) loop
+			readline(input_file, input_line);
+			read(input_line, first_line_r_a);		--request/ack read
+			read(input_line, first_line_tick);		--read time
+			read(input_line, first_line_r_w);		--read a space
+			read(input_line, first_line_r_w);		--read r/w 
+			hread(input_line, first_line_addr);		--read addr
+			hread(input_line, first_line_data);		--read data
+			
+			readline(input_file, input_line);
+			read(input_line, second_line_r_a);		--request/ack read
+			read(input_line, second_line_tick);		--read time
+			read(input_line, second_line_r_w);		--read a space
+			read(input_line, second_line_r_w);		--read r/w 
+			hread(input_line, second_line_addr);	--read addr
+			hread(input_line, second_line_data);	--read data
+			
+			assert first_line_r_a = 'r' report "First line not a request";
+			assert second_line_r_a = 'a' report "Second line not an ack";
+			
+			sos <= '0';
+			abus <= first_line_addr;
+			dbus <= (others => 'U');
+			if(second_line_r_w = 'r') then
+				cbus <= '1';
+			else
+				cbus <= '0';
+			end if;
+			wait for (second_line_tick - first_line_tick)/2;
+			dbus <= second_line_data;
+			sos <= '1' after sos_delay;
+			wait for (second_line_tick - first_line_tick)/2;
+	
+		end loop;
+				
       wait;
    end process;
 

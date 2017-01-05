@@ -1,0 +1,8 @@
+vhdl work "D_FF.vhd"
+vhdl work "up_counter.vhd"
+vhdl work "MISR.vhd"
+vhdl work "golden_ROM.vhd"
+vhdl work "equality_comparator.vhd"
+vhdl work "down_counter.vhd"
+vhdl work "fault_checker.vhd"
+vhdl work "fault_checker_test.vhd"
