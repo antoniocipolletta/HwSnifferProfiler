@@ -67,16 +67,18 @@ ARCHITECTURE Structural OF fault_checker IS
 	SIGNAL addr_s: std_logic_vector(9 downto 0);
 	
 	SIGNAL ack_s: std_logic;
+	SIGNAL rst_n_misr: std_logic;
 	
 BEGIN
 
-	sample_s <= abus & dbus & cbus;
-	golden_s <= abus_golden & dbus_golden & cbus_golden;
+	sample_s <= cbus & dbus & abus;
+	golden_s <= cbus_golden & dbus_golden & abus_golden;
 	ack_s <= ack OR (NOT(rst_n));
+	rst_n_misr <= rst_n OR (NOT(tc_s));
 
 	misr_c: MISR PORT MAP  (d => sample_s,			
 									clk => sos,									
-									rst_n => rst_n,								
+									rst_n => rst_n_misr,								
 									sign => sign_s);
 									
 	golden_rom_abus: golden_bus_ROM PORT MAP (clka => tc_s,

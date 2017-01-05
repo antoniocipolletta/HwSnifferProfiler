@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/brb/lapo2/incRam/fault_checker_test_isim_beh.exe" -prj "/home/brb/lapo2/incRam/fault_checker_test_beh.prj" "work.fault_checker_test" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/brb/lapo2/incRam/MISR_test_isim_beh.exe" -prj "/home/brb/lapo2/incRam/MISR_test_beh.prj" "work.MISR_test" 

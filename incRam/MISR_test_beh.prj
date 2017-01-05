@@ -1,0 +1,3 @@
+vhdl work "D_FF.vhd"
+vhdl work "MISR.vhd"
+vhdl work "MISR_test.vhd"
