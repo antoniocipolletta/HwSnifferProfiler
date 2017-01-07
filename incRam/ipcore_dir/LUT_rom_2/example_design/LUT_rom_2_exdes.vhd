@@ -89,7 +89,7 @@ USE UNISIM.VCOMPONENTS.ALL;
 ENTITY LUT_rom_2_exdes IS
   PORT (
       --Inputs - Port A
-    ADDRA          : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DOUTA          : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
     CLKA       : IN STD_LOGIC
@@ -112,7 +112,7 @@ ARCHITECTURE xilinx OF LUT_rom_2_exdes IS
   COMPONENT LUT_rom_2 IS
   PORT (
       --Port A
-    ADDRA      : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DOUTA      : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 

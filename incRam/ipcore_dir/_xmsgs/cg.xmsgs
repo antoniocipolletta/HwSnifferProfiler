@@ -8,30 +8,5 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;LUT_rom&apos; already exists in the project. Output products for this core may be overwritten.</arg>
-</msg>
-
-<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;LUT_rom&apos;...</arg>
-</msg>
-
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file /home/cipolletta/Documenti/SSDS/assignment/incRam/ipcore_dir/tmp/_cg/LUT_rom/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
-</msg>
-
-<msg type="error" file="sim" num="938" delta="old" >Error while preparing for IP customization
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" >Failed to initialize IP model.
-</msg>
-
-<msg type="warning" file="sim" num="946" delta="old" >Failed to initialise IP Model for ASY schematic symbol
-</msg>
-
-<msg type="error" file="sim" num="944" delta="old" >Failed to generate ASY schematic symbol.
-</msg>
-
-<msg type="error" file="sim" num="0" delta="new" >Failed to generate &apos;LUT_rom&apos;.  Failed to initialise IP Model for ASY schematic symbol
-
-</msg>
-
 </messages>
 

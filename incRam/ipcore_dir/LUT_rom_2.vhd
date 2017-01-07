@@ -22,7 +22,7 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2016 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2017 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
@@ -43,7 +43,7 @@ LIBRARY XilinxCoreLib;
 ENTITY LUT_rom_2 IS
   PORT (
     clka : IN STD_LOGIC;
-    addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END LUT_rom_2;
@@ -53,7 +53,7 @@ ARCHITECTURE LUT_rom_2_a OF LUT_rom_2 IS
 COMPONENT wrapped_LUT_rom_2
   PORT (
     clka : IN STD_LOGIC;
-    addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT;
@@ -61,8 +61,8 @@ END COMPONENT;
 -- Configuration specification
   FOR ALL : wrapped_LUT_rom_2 USE ENTITY XilinxCoreLib.blk_mem_gen_v7_3(behavioral)
     GENERIC MAP (
-      c_addra_width => 10,
-      c_addrb_width => 10,
+      c_addra_width => 7,
+      c_addrb_width => 7,
       c_algorithm => 1,
       c_axi_id_width => 4,
       c_axi_slave_type => 0,
@@ -97,8 +97,8 @@ END COMPONENT;
       c_mem_type => 3,
       c_mux_pipeline_stages => 0,
       c_prim_type => 1,
-      c_read_depth_a => 1024,
-      c_read_depth_b => 1024,
+      c_read_depth_a => 128,
+      c_read_depth_b => 128,
       c_read_width_a => 8,
       c_read_width_b => 8,
       c_rst_priority_a => "CE",
@@ -115,8 +115,8 @@ END COMPONENT;
       c_use_softecc => 0,
       c_wea_width => 1,
       c_web_width => 1,
-      c_write_depth_a => 1024,
-      c_write_depth_b => 1024,
+      c_write_depth_a => 128,
+      c_write_depth_b => 128,
       c_write_mode_a => "WRITE_FIRST",
       c_write_mode_b => "WRITE_FIRST",
       c_write_width_a => 8,

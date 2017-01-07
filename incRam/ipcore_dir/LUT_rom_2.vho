@@ -22,7 +22,7 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2016 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2017 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@
 COMPONENT LUT_rom_2
   PORT (
     clka : IN STD_LOGIC;
-    addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
     douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
   );
 END COMPONENT;

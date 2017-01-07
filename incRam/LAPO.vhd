@@ -6,8 +6,9 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity LAPO is
-	generic( data_dimension: natural := 32;
-				address_dimension: natural := 64);
+	generic( data_dimension: natural := 64;
+				address_dimension: natural := 64;
+				bit_groups: natural := 7);
 	port(
 		clk: 		in std_logic;
 		rst_n: 	in std_logic;	
@@ -21,7 +22,7 @@ entity LAPO is
 		debug_read:		in std_logic;
 		debug_ack:		out std_logic;
 		debug_data: 	out std_logic_vector(15 downto 0);
-		debug_address: in std_logic_vector(4 downto 0)
+		debug_address: in std_logic_vector(bit_groups-1 downto 0)
 	);
 end LAPO;
 
@@ -39,7 +40,7 @@ architecture Behavioral of LAPO is
 	component LUT_rom_2 IS
 	  PORT (
 		 clka : IN STD_LOGIC;
-		 addra : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+		 addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 		 douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	  );
 	end component LUT_rom_2;
@@ -47,13 +48,13 @@ architecture Behavioral of LAPO is
 	component incRam is
 	port(	
 			init: 	in std_logic;								-- Initialize to all zero the memory
-			addrb: 	in std_logic_vector(4 downto 0);		-- Debug Port Address 
+			addrb: 	in std_logic_vector(bit_groups-1 downto 0);-- Debug Port Address 
 			doutb: 	out std_logic_vector(15 downto 0);	-- Debug Port Data
 			read_b: 	in std_logic;								-- Enable the read from Debug Port
 			ackb:		out std_logic;								-- Ack for port B
 			clk:	 	in std_logic;								-- Clock
 			rst_n: 	in std_logic;								-- Reset asynch active low
-			address: in std_logic_vector(4 downto 0);		-- Address for increment
+			address: in std_logic_vector(bit_groups-1 downto 0);-- Address for increment
 			en: 		in std_logic								-- Enable the increment
 	)	;		 
 	end component incRam;
@@ -74,7 +75,7 @@ architecture Behavioral of LAPO is
 	signal old_old_sample_s: std_logic;
 	signal old_sample_s: std_logic;
 	
-	signal sampled_profiled_out_s: std_logic_vector(9 downto 0);
+	signal sampled_profiled_out_s: std_logic_vector(6 downto 0);
 	signal group_address_s: std_logic_vector(7 downto 0);
 	
 	-- Bus Latched
@@ -93,7 +94,7 @@ begin
 	 
 	load_bus_s <= sop_s; 
 	
-	sampled_profiled_out_s <= data_latched_s(31 downto 22);
+	sampled_profiled_out_s <= data_latched_s(27 downto 21);
 	
 	data_reg: load_reg_N generic map ( N => data_dimension )
 		port map (
@@ -153,7 +154,7 @@ begin
 			ackb => debug_ack,
 			clk => clk,
 			rst_n => rst_n,
-			address => group_address_s(4 downto 0),
+			address => group_address_s(6 downto 0),
 			en => sop_s
 		);		 
 							

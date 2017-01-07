@@ -4,20 +4,22 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity CU is
 	port(
-			init: in std_logic; -- signal to write into the RAM all zeros
-			en: in std_logic; -- enable a increment cycle
+			init: in std_logic; 		-- signal to write into the RAM all zeros
+			en: in std_logic; 		-- enable a increment cycle
 			
-			en_cnt: out std_logic;
-			tc_cnt: in std_logic;
-			rst_cnt: out std_logic;
+			en_cnt: out std_logic;	-- enable the counter needed to generate address in the initialization process
+			tc_cnt: in std_logic;	-- status signal = terminal count from counter
+			rst_cnt: out std_logic;	-- control signal = reset the counter
 			
-			en_mem_s: out std_logic;
-			wea_s: out std_logic;
+			tc_cnt2: in std_logic;
 			
-			clk: in std_logic;
-			rst_n: in std_logic;
-			init_in_prog: out std_logic;
-			init_sel: out std_logic
+			en_mem_s: out std_logic;-- enable memory signal 
+			wea_s: out std_logic;	-- write enable for the memory
+			
+			clk: in std_logic;		-- clock signal
+			rst_n: in std_logic;		-- reset asynch
+			init_in_prog: out std_logic;-- expressing if is in progress the process of initialization
+			init_sel: out std_logic	-- multiplexer for address source for the memory
 	);
 end CU;
 
@@ -37,7 +39,7 @@ begin
 		end if;
 	end process;
 	
-	comb: process(current_state,en,init,tc_cnt)
+	comb: process(current_state,en,init,tc_cnt,tc_cnt2)
 	begin
 		en_mem_s <= '1';
 		rst_cnt <= '1';
@@ -69,7 +71,11 @@ begin
 				en_cnt <= '1';
 				wea_s <= '1';
 			when Rd =>
-				next_state <= Wr;
+				if ( tc_cnt2 = '1' ) then 
+					next_state <= Wr;
+				else
+					next_state <= Rd;
+				end if;
 				wea_s <= '0';
 			when Wr =>
 				if ( en = '1' ) then

@@ -92,7 +92,7 @@ ENTITY ram_exdes IS
     ENA            : IN STD_LOGIC;  --opt port
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
   
@@ -105,7 +105,7 @@ ENTITY ram_exdes IS
     ENB            : IN STD_LOGIC;  --opt port
   
     WEB            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRB          : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    ADDRB          : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DINB           : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     DOUTB          : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -131,7 +131,7 @@ ARCHITECTURE xilinx OF ram_exdes IS
     ENA        : IN STD_LOGIC;  --opt port
   
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DINA       : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
   
@@ -145,7 +145,7 @@ ARCHITECTURE xilinx OF ram_exdes IS
     ENB        : IN STD_LOGIC;  --opt port
   
     WEB        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRB      : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+    ADDRB      : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
   
     DINB       : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     DOUTB      : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);

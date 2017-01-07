@@ -9,12 +9,11 @@ use UNISIM.VComponents.all;
 
 
 entity DP is
+	generic( bit_groups: natural := 7);
 	port(
-			-- signal with s as prefix -> status signal
-			-- signal with c as prefix -> control signal
 			en:	in std_logic; 								-- enable for the memory ( controlled by
-																	-- the Controller!
-			address: in std_logic_vector(4 downto 0); -- address to increment
+																	-- the Controller!)
+			address: in std_logic_vector(bit_groups-1 downto 0); -- address to increment
 
 			clk: in std_logic;								-- clock
 			
@@ -22,13 +21,16 @@ entity DP is
 			en_cnt: in std_logic;							-- enable the counter
 			rst_cnt: in std_logic;							-- reset of the counter
 			tc_cnt: out std_logic;							-- terminal count
+			tc_cnt2: out std_logic;
 			wea: in std_logic;								-- write enable
 			
 			
 			enb:   in std_logic;								-- enable for port b memory
-			addrb: in std_logic_vector(4 downto 0);	-- signal of port b
-			doutb: out std_logic_vector(15 downto 0)	-- doutb
+			addrb: in std_logic_vector(bit_groups-1 downto 0);	-- signal of port b
+			doutb: out std_logic_vector(15 downto 0);	-- doutb
 			
+			cmp_addr_s: out std_logic
+			 
 	);
 end DP;
 
@@ -51,27 +53,40 @@ architecture structural of DP is
 			 clka : IN STD_LOGIC;
 			 ena : IN STD_LOGIC;
 			 wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-			 addra : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			 addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 			 dina : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 			 douta : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 			 clkb : IN STD_LOGIC;
 			 enb : IN STD_LOGIC;
 			 web : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-			 addrb : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+			 addrb : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
 			 dinb : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
 			 doutb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
 		  );
 	END component;
-	
-	component down_counter_5 is
+	  
+	component down_counter_generic is
+		generic ( parallelism : natural := 7);
 		port ( 
 				clk : in std_logic;
 				rst_n: in std_logic;
 				en: in std_logic;
-				cnt_value: out std_logic_vector(4 downto 0);
+				cnt_value: out std_logic_vector(parallelism-1 downto 0);
 				tc: out std_logic
 		);
-	end component down_counter_5;
+	end component down_counter_generic;
+	
+	component down_timer is
+		generic ( parallelism : natural := 3 );
+		port ( 
+			clk : in std_logic;
+			rst_n: in std_logic;
+			initial_value: in std_logic_vector(parallelism-1 downto 0);
+			tc: out std_logic
+		);
+	end component down_timer;
+	
+	
 	
 	component mux2_parallelism is
 		generic ( parallelism: natural := 16 );
@@ -91,16 +106,19 @@ architecture structural of DP is
 	end component;
 	
 	signal wea_s: std_logic;
-	signal addra_s: std_logic_vector(4 downto 0);
+	signal addra_s: std_logic_vector(bit_groups-1 downto 0);
 	signal dina_s: std_logic_vector(15 downto 0);
 	signal douta_s: std_logic_vector(15 downto 0);
 	signal ena_s: std_logic;
 
 	signal reg_out_s: std_logic_vector(15 downto 0);
 
-	signal cnt_value_s: std_logic_vector(4 downto 0);
+	signal cnt_value_s: std_logic_vector(bit_groups-1 downto 0);
 	signal inc_out_s: std_logic_vector(15 downto 0);
 begin
+
+	cmp_addr_s <= '1' when ( address = addrb) else '0';
+
 	MEM: ram port map(
 							ena => en,
 							wea(0) => wea,
@@ -117,7 +135,7 @@ begin
 							);
 	
 		
-	MUX_ADDRESS: mux2_parallelism generic map ( parallelism => 5 )
+	MUX_ADDRESS: mux2_parallelism generic map ( parallelism => bit_groups )
 				port map(
 							in0 => address,
 							in1 => cnt_value_s,
@@ -133,7 +151,8 @@ begin
 							sel => init_sel
 							);
 	
-	CNT: down_counter_5 
+	CNT: down_counter_generic
+				generic map ( parallelism => bit_groups)
 				port map(
 							clk => clk,
 							rst_n => rst_cnt,
@@ -141,7 +160,13 @@ begin
 							cnt_value => cnt_value_s,
 							tc => tc_cnt
 				);
-				
+	TMR: down_timer
+				port map(
+							clk => clk,
+							rst_n => rst_cnt,
+							initial_value => "001",
+							tc => tc_cnt2
+				);			
 	INKER: inc
 				port map(
 							op => douta_s,

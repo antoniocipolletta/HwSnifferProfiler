@@ -10,22 +10,24 @@
          <ClosedNode>/LAPO - Behavioral |home|brb|lapo2|incRam|LAPO.vhd</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|brb|lapo|incRam|LAPO.vhd</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|brb|lapo|incRam|LAPO.vhd/DebugRam - incRam - Behavioral/datapath - DP - structural</ClosedNode>
+         <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|LAPO.vhd/DebugRam - incRam - Behavioral/datapath - DP - structural</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|LAPO.vhd/DebugRam - incRam - Behavioral</ClosedNode>
          <ClosedNode>/MISR - Behavioral |home|brb|lapo|incRam|MISR.vhd</ClosedNode>
          <ClosedNode>/fault_checker - Structural |home|brb|lapo|incRam|fault_checker.vhd/misr_c - MISR - Structural</ClosedNode>
+         <ClosedNode>/fault_checker - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|fault_checker.vhd</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd/datapath - DP - Behavioral</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd/datapath - DP - structural</ClosedNode>
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>fault_checker - Structural (/home/brb/lapo2/incRam/fault_checker.vhd)</SelectedItem>
+         <SelectedItem>LAPO - Behavioral (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/LAPO.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000222000000020000000000000000000000000200000064ffffffff000000810000000300000002000002220000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bc000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bc0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>fault_checker - Structural (/home/brb/lapo2/incRam/fault_checker.vhd)</CurrentItem>
+      <CurrentItem>LAPO - Behavioral (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/LAPO.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -46,7 +48,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014c000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014c0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000167000000010000000100000000000000000000000064ffffffff000000810000000000000001000001670000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Synthesize - XST</CurrentItem>
    </ItemView>
@@ -57,7 +59,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002a0000000040101000100000000000000000000000064ffffffff0000008100000000000000040000005200000001000000000000005d00000001000000000000008400000001000000000000016d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027b000000040101000100000000000000000000000064ffffffff0000008100000000000000040000005200000001000000000000005d0000000100000000000000840000000100000000000001480000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>CU.vhd</CurrentItem>
    </ItemView>
@@ -80,53 +82,61 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000176000000010000000100000000000000000000000064ffffffff000000810000000000000001000001760000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000161000000f201000000060100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/MISR - Behavioral |home|brb|lapo|incRam|MISR.vhd</ClosedNode>
          <ClosedNode>/MISR_test - behavior |home|brb|lapo2|incRam|MISR_test.vhd</ClosedNode>
          <ClosedNode>/MISR_test - behavior |home|brb|lapo|incRam|MISR_test.vhd</ClosedNode>
+         <ClosedNode>/MISR_test - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|MISR_test.vhd</ClosedNode>
          <ClosedNode>/fault_checker - Structural |home|brb|lapo|incRam|fault_checker.vhd</ClosedNode>
          <ClosedNode>/fault_checker_test - behavior |home|brb|lapo2|incRam|fault_checker_test.vhd</ClosedNode>
          <ClosedNode>/fault_checker_test - behavior |home|brb|lapo|incRam|fault_checker_test.vhd</ClosedNode>
+         <ClosedNode>/fault_checker_test - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|fault_checker_test.vhd</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd</ClosedNode>
          <ClosedNode>/test1 - behavior |home|brb|lapo2|incRam|test1.vhd</ClosedNode>
          <ClosedNode>/test1 - behavior |home|brb|lapo|incRam|test1.vhd</ClosedNode>
+         <ClosedNode>/test1 - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test1.vhd</ClosedNode>
          <ClosedNode>/test1 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test1.vhd</ClosedNode>
          <ClosedNode>/test1 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test1.vhd/uut - incRam - Behavioral/datapath - DP - Behavioral</ClosedNode>
          <ClosedNode>/test1 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test1.vhd/uut - incRam - Behavioral/datapath - DP - structural</ClosedNode>
          <ClosedNode>/test2 - behavior |home|brb|lapo2|incRam|test2.vhd</ClosedNode>
          <ClosedNode>/test2 - behavior |home|brb|lapo|incRam|test2.vhd</ClosedNode>
+         <ClosedNode>/test2 - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test2.vhd</ClosedNode>
          <ClosedNode>/test2 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test2.vhd</ClosedNode>
          <ClosedNode>/test3 - behavior |home|brb|lapo2|incRam|test3.vhd</ClosedNode>
          <ClosedNode>/test3 - behavior |home|brb|lapo|incRam|test3.vhd</ClosedNode>
+         <ClosedNode>/test3 - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test3.vhd/uut - LAPO - Behavioral/DebugRam - incRam - Behavioral</ClosedNode>
          <ClosedNode>/test3 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test3.vhd/uut - LAPO - Behavioral/DebugRam - incRam - Behavioral</ClosedNode>
          <ClosedNode>/test3 - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test3.vhd/uut - LAPO - Behavioral/LUT - LUT_rom - LUT_rom_a</ClosedNode>
+         <ClosedNode>/test_lapo_profiling - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test_lapo_profiling.vhd</ClosedNode>
          <ClosedNode>/test_lut_rom - behavior |home|brb|lapo2|incRam|test_lut_rom.vhd</ClosedNode>
          <ClosedNode>/test_lut_rom - behavior |home|brb|lapo|incRam|test_lut_rom.vhd</ClosedNode>
+         <ClosedNode>/test_lut_rom - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test_lut_rom.vhd</ClosedNode>
          <ClosedNode>/test_lut_rom - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test_lut_rom.vhd</ClosedNode>
          <ClosedNode>/test_ram - behavior |home|brb|lapo2|incRam|test_ram.vhd</ClosedNode>
          <ClosedNode>/test_ram - behavior |home|brb|lapo|incRam|test_ram.vhd</ClosedNode>
+         <ClosedNode>/test_ram - behavior |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|test_ram.vhd</ClosedNode>
          <ClosedNode>/test_ram - behavior |home|cipolletta|Documenti|SSDS|assignment|incRam|test_ram.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>fault_checker_test - behavior (/home/brb/lapo2/incRam/fault_checker_test.vhd)</SelectedItem>
+         <SelectedItem>test_lapo_profiling - behavior (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test_lapo_profiling.vhd)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001a4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001a40000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d0000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d00000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>fault_checker_test - behavior (/home/brb/lapo2/incRam/fault_checker_test.vhd)</CurrentItem>
+      <CurrentItem>test_lapo_profiling - behavior (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test_lapo_profiling.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -134,13 +144,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000176000000010000000100000000000000000000000064ffffffff000000810000000000000001000001760000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -151,7 +161,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000015b000000010000000100000000000000000000000064ffffffff0000008100000000000000010000015b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000176000000010000000100000000000000000000000064ffffffff000000810000000000000001000001760000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
@@ -214,12 +224,14 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" />
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000126000000010000000100000000000000000000000064ffffffff000000810000000000000001000001260000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>
