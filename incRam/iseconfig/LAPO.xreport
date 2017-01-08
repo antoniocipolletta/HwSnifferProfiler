@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-01-02T14:47:05</DateModified>
-  <ModuleName>MISR</ModuleName>
-  <SummaryTimeStamp>2016-12-13T14:55:37</SummaryTimeStamp>
-  <SavedFilePath>/home/brb/lapo/incRam/iseconfig/LAPO.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/brb/lapo/incRam/</ImplementationReportsDirectory>
+  <DateModified>2017-01-07T20:29:19</DateModified>
+  <ModuleName>LAPO</ModuleName>
+  <SummaryTimeStamp>2017-01-07T20:27:54</SummaryTimeStamp>
+  <SavedFilePath>/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/iseconfig/LAPO.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/</ImplementationReportsDirectory>
   <DateInitialized>2017-01-02T14:47:05</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

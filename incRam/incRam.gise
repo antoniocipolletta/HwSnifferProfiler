@@ -91,6 +91,9 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/synthesis/LAPO_synthesis.nlf"/>
+    <file xil_pn:branch="PostSynthSim" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/synthesis/LAPO_synthesis.vhd"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test1_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="test_lapo_profiling_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="test_lapo_profiling_isim_beh.exe"/>
@@ -113,34 +116,11 @@
     <transform xil_pn:end_ts="1483802508" xil_pn:in_ck="5829724120029882206" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1483802508">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CU.vhd"/>
-      <outfile xil_pn:name="DP.vhd"/>
-      <outfile xil_pn:name="D_FF.vhd"/>
-      <outfile xil_pn:name="LAPO.vhd"/>
-      <outfile xil_pn:name="MISR.vhd"/>
-      <outfile xil_pn:name="MISR_test.vhd"/>
-      <outfile xil_pn:name="controllerB.vhd"/>
-      <outfile xil_pn:name="down_counter.vhd"/>
-      <outfile xil_pn:name="down_counter_5.vhd"/>
-      <outfile xil_pn:name="down_counter_genric.vhd"/>
-      <outfile xil_pn:name="down_timer.vhd"/>
-      <outfile xil_pn:name="equality_comparator.vhd"/>
-      <outfile xil_pn:name="fault_checker.vhd"/>
-      <outfile xil_pn:name="fault_checker_test.vhd"/>
-      <outfile xil_pn:name="golden_ROM.vhd"/>
-      <outfile xil_pn:name="inc.vhd"/>
-      <outfile xil_pn:name="incRam.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
-      <outfile xil_pn:name="load_reg_N.vhd"/>
-      <outfile xil_pn:name="mux2_parallelism.vhd"/>
-      <outfile xil_pn:name="test1.vhd"/>
-      <outfile xil_pn:name="test2.vhd"/>
-      <outfile xil_pn:name="test3.vhd"/>
-      <outfile xil_pn:name="test_lapo_profiling.vhd"/>
-      <outfile xil_pn:name="test_lut_rom.vhd"/>
-      <outfile xil_pn:name="test_ram.vhd"/>
-      <outfile xil_pn:name="trace_testbench.vhd"/>
-      <outfile xil_pn:name="up_counter.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1483797898" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-4550524531730803094" xil_pn:start_ts="1483797898">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -153,60 +133,41 @@
     <transform xil_pn:end_ts="1483797381" xil_pn:in_ck="-1542175531908946488" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-1110897336134045737" xil_pn:start_ts="1483797381">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/LUT_rom_2.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/LUT_rom_2.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1483802508" xil_pn:in_ck="7438341086908475056" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1483802508">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="CU.vhd"/>
-      <outfile xil_pn:name="DP.vhd"/>
-      <outfile xil_pn:name="D_FF.vhd"/>
-      <outfile xil_pn:name="LAPO.vhd"/>
-      <outfile xil_pn:name="MISR.vhd"/>
-      <outfile xil_pn:name="MISR_test.vhd"/>
-      <outfile xil_pn:name="controllerB.vhd"/>
-      <outfile xil_pn:name="down_counter.vhd"/>
-      <outfile xil_pn:name="down_counter_5.vhd"/>
-      <outfile xil_pn:name="down_counter_genric.vhd"/>
-      <outfile xil_pn:name="down_timer.vhd"/>
-      <outfile xil_pn:name="equality_comparator.vhd"/>
-      <outfile xil_pn:name="fault_checker.vhd"/>
-      <outfile xil_pn:name="fault_checker_test.vhd"/>
-      <outfile xil_pn:name="golden_ROM.vhd"/>
-      <outfile xil_pn:name="inc.vhd"/>
-      <outfile xil_pn:name="incRam.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/LUT_rom_2.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/ram.vhd"/>
-      <outfile xil_pn:name="load_reg_N.vhd"/>
-      <outfile xil_pn:name="mux2_parallelism.vhd"/>
-      <outfile xil_pn:name="test1.vhd"/>
-      <outfile xil_pn:name="test2.vhd"/>
-      <outfile xil_pn:name="test3.vhd"/>
-      <outfile xil_pn:name="test_lapo_profiling.vhd"/>
-      <outfile xil_pn:name="test_lut_rom.vhd"/>
-      <outfile xil_pn:name="test_ram.vhd"/>
-      <outfile xil_pn:name="trace_testbench.vhd"/>
-      <outfile xil_pn:name="up_counter.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1483802512" xil_pn:in_ck="5626842301398035313" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7620512717268367613" xil_pn:start_ts="1483802508">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="test_lapo_profiling_beh.prj"/>
-      <outfile xil_pn:name="test_lapo_profiling_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1483802512" xil_pn:in_ck="-2808916004441464983" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7870551570579449334" xil_pn:start_ts="1483802512">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="test_lapo_profiling_isim_beh.wdb"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1483436245" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1483436245">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -216,7 +177,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1483797115" xil_pn:in_ck="-1542175531908946488" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1110897336134045737" xil_pn:start_ts="1483797115">
+    <transform xil_pn:end_ts="1483817213" xil_pn:in_ck="-1542175531908946488" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1110897336134045737" xil_pn:start_ts="1483817212">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/LUT_rom_2.ngc"/>
@@ -238,10 +199,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1483801239" xil_pn:in_ck="-7340908896764978016" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6156376947236457998" xil_pn:start_ts="1483801230">
+    <transform xil_pn:end_ts="1483817221" xil_pn:in_ck="-7340908896764978016" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6156376947236457998" xil_pn:start_ts="1483817213">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="LAPO.lso"/>
       <outfile xil_pn:name="LAPO.ngc"/>
       <outfile xil_pn:name="LAPO.ngr"/>
@@ -259,21 +222,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1483797130" xil_pn:in_ck="6029775198730594382" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8774978770817919157" xil_pn:start_ts="1483797124">
+    <transform xil_pn:end_ts="1483817249" xil_pn:in_ck="6029775198730594382" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-8774978770817919157" xil_pn:start_ts="1483817244">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="LAPO.bld"/>
       <outfile xil_pn:name="LAPO.ngd"/>
       <outfile xil_pn:name="LAPO_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1483797160" xil_pn:in_ck="5185476406415192761" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="-8064276643144408623" xil_pn:start_ts="1483797130">
+    <transform xil_pn:end_ts="1483817274" xil_pn:in_ck="5185476406415192761" xil_pn:name="TRANEXT_map_virtex6" xil_pn:prop_ck="-8064276643144408623" xil_pn:start_ts="1483817249">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAPO.pcf"/>
       <outfile xil_pn:name="LAPO_map.map"/>
       <outfile xil_pn:name="LAPO_map.mrp"/>
@@ -284,10 +244,9 @@
       <outfile xil_pn:name="LAPO_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1483797188" xil_pn:in_ck="4366623556946646674" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-7437974624027853855" xil_pn:start_ts="1483797160">
+    <transform xil_pn:end_ts="1483817301" xil_pn:in_ck="4366623556946646674" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-7437974624027853855" xil_pn:start_ts="1483817274">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAPO.ncd"/>
       <outfile xil_pn:name="LAPO.pad"/>
       <outfile xil_pn:name="LAPO.par"/>
@@ -299,13 +258,22 @@
       <outfile xil_pn:name="LAPO_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1483797188" xil_pn:in_ck="4983307980360285493" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1483797178">
+    <transform xil_pn:end_ts="1483817301" xil_pn:in_ck="4983307980360285493" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1483817291">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="LAPO.twr"/>
       <outfile xil_pn:name="LAPO.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1483816886" xil_pn:in_ck="5478234121061705032" xil_pn:name="TRAN_postSynthesisSimModel" xil_pn:prop_ck="3627770573529717300" xil_pn:start_ts="1483816884">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 
