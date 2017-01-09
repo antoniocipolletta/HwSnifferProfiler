@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.syr" 
+xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.syr" 

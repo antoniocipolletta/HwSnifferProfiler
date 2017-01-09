@@ -12,23 +12,30 @@
          <ClosedNode>/LAPO - Behavioral |home|brb|lapo|incRam|LAPO.vhd/DebugRam - incRam - Behavioral/datapath - DP - structural</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|LAPO.vhd</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|LAPO.vhd/DebugRam - incRam - Behavioral/datapath - DP - structural</ClosedNode>
+         <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|LAPO.vhd</ClosedNode>
          <ClosedNode>/LAPO - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|LAPO.vhd/DebugRam - incRam - Behavioral</ClosedNode>
+         <ClosedNode>/LAPO_toplevel - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|LAPO_toplevel.vhd</ClosedNode>
+         <ClosedNode>/LAPO_toplevel - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|LAPO_toplevel.vhd/Fault_Checker - fault_checker - Structural</ClosedNode>
+         <ClosedNode>/LAPO_toplevel - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|LAPO_toplevel.vhd/Profiler - profiler - Structural</ClosedNode>
          <ClosedNode>/MISR - Behavioral |home|brb|lapo|incRam|MISR.vhd</ClosedNode>
          <ClosedNode>/fault_checker - Structural |home|brb|lapo|incRam|fault_checker.vhd/misr_c - MISR - Structural</ClosedNode>
          <ClosedNode>/fault_checker - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|incRam|fault_checker.vhd</ClosedNode>
+         <ClosedNode>/fault_checker - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|fault_checker.vhd</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd/datapath - DP - Behavioral</ClosedNode>
          <ClosedNode>/incRam - Behavioral |home|cipolletta|Documenti|SSDS|assignment|incRam|incRam.vhd/datapath - DP - structural</ClosedNode>
+         <ClosedNode>/profiler - Structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|profiler.vhd</ClosedNode>
+         <ClosedNode>/profiler - structural |home|cipolletta|Documenti|SSDS|assignment_gamma|lapo|lapo|profiler.vhd</ClosedNode>
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>LAPO - Behavioral (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/LAPO.vhd)</SelectedItem>
+         <SelectedItem>LAPO_toplevel - Structural (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000195000000020000000000000000000000000200000064ffffffff000000810000000300000002000001950000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>LAPO - Behavioral (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/LAPO.vhd)</CurrentItem>
+      <CurrentItem>LAPO_toplevel - Structural (/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
@@ -83,13 +90,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000176000000010000000100000000000000000000000064ffffffff000000810000000000000001000001760000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000161000000f201000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

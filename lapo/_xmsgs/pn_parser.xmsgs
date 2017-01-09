@@ -8,31 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/MISR_test.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/fault_checker_test.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test1.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test2.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test3.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test_lapo_profiling.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test_lut_rom.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/test_ram.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/trace_testbench.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

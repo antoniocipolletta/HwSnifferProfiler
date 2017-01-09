@@ -1,11 +1,7 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
---use IEEE.NUMERIC_STD.ALL;
 
---library UNISIM;
---use UNISIM.VComponents.all;
-
-entity LAPO is
+entity LAPO_toplevel is
 	generic( data_dimension: natural := 64;
 				address_dimension: natural := 64;
 				bit_groups: natural := 7);
@@ -22,11 +18,26 @@ entity LAPO is
 		debug_read:		in std_logic;
 		debug_ack:		out std_logic;
 		debug_data: 	out std_logic_vector(15 downto 0);
-		debug_address: in std_logic_vector(bit_groups-1 downto 0)
+		debug_address: in std_logic_vector(bit_groups-1 downto 0);
+		-- Fault Detection Port
+		fault_ack:		in std_logic;
+		fault_detected:out std_logic
 	);
-end LAPO;
+end LAPO_toplevel;
 
-architecture Behavioral of LAPO is
+architecture Structural of LAPO_toplevel is
+	
+	
+	component load_D_FF is
+	port(
+		clk: in std_logic;
+		rst_n: in std_logic;
+		load: in std_logic;
+		d: in std_logic;
+		q: out std_logic
+	);
+	end component load_D_FF;
+	
 	
 	component D_FF is
 		port(
@@ -37,38 +48,44 @@ architecture Behavioral of LAPO is
 		);
 	end component D_FF;
 	
-	component LUT_rom_2 IS
-	  PORT (
-		 clka : IN STD_LOGIC;
-		 addra : IN STD_LOGIC_VECTOR(6 DOWNTO 0);
-		 douta : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
-	  );
-	end component LUT_rom_2;
-		
-	component incRam is
-	port(	
-			init: 	in std_logic;								-- Initialize to all zero the memory
-			addrb: 	in std_logic_vector(bit_groups-1 downto 0);-- Debug Port Address 
-			doutb: 	out std_logic_vector(15 downto 0);	-- Debug Port Data
-			read_b: 	in std_logic;								-- Enable the read from Debug Port
-			ackb:		out std_logic;								-- Ack for port B
-			clk:	 	in std_logic;								-- Clock
-			rst_n: 	in std_logic;								-- Reset asynch active low
-			address: in std_logic_vector(bit_groups-1 downto 0);-- Address for increment
-			en: 		in std_logic								-- Enable the increment
-	)	;		 
-	end component incRam;
-	
 	component load_reg_N is
 		generic ( N: natural := 16 );
 		port( 
-				D: in std_logic_vector(N-1 downto 0);
-				Q: out std_logic_vector(N-1 downto 0);
-				clk: in std_logic;
-				rst_n: in std_logic;
-				load: in std_logic
-			);
+			D: in std_logic_vector(N-1 downto 0);
+			Q: out std_logic_vector(N-1 downto 0);
+			clk: in std_logic;
+			rst_n: in std_logic;
+			load: in std_logic
+		);
 	end component load_reg_N;
+	
+	component profiler is
+		generic( bit_groups: natural := 7);
+		port(
+			clk: 		in std_logic;
+			rst_n: 	in std_logic;	
+			sos:		in std_logic;	-- start of sample -> on the rising edge sample bus
+			-- Bus interface
+			data: 	in std_logic_vector(bit_groups - 1 downto 0);
+			-- Debug Port
+			debug_init:		in std_logic;
+			debug_read:		in std_logic;
+			debug_ack:		out std_logic;
+			debug_data: 	out std_logic_vector(15 downto 0);
+			debug_address: in std_logic_vector(bit_groups-1 downto 0)
+		);
+	end component profiler;
+	
+	component fault_checker IS
+		PORT (
+			dbus: IN std_logic_vector(63 DOWNTO 0);	--data bus input
+			abus: IN std_logic_vector(63 DOWNTO 0);	--address bus input
+			cbus: IN std_logic;								--control bus input
+			sos: IN std_logic;								--start of sample (clk)
+			ack: IN std_logic;								--acknowledgment
+			rst_n: IN std_logic;								--reset async. active low
+			fault: OUT std_logic);							--goes to 1 when a fault is detected	
+	end component fault_checker;
 	
 	
 	-- Control signals to synch the external start of sampling
@@ -76,7 +93,6 @@ architecture Behavioral of LAPO is
 	signal old_sample_s: std_logic;
 	
 	signal sampled_profiled_out_s: std_logic_vector(6 downto 0);
-	signal group_address_s: std_logic_vector(7 downto 0);
 	
 	-- Bus Latched
 	signal data_latched_s: std_logic_vector( data_dimension - 1 downto 0);
@@ -86,10 +102,8 @@ architecture Behavioral of LAPO is
 	-- Control signal
 	signal load_bus_s: std_logic;
 	signal sop_s: std_logic;	-- Start of profiling
-	
-	
-	
-	
+	signal sofc_s: std_logic;  -- Start of fault check signal;
+			
 begin
 	 
 	load_bus_s <= sop_s; 
@@ -114,10 +128,11 @@ begin
 			load => load_bus_s
 		);
 	
-	control_reg: D_FF 
+	control_reg: load_D_FF 
 		port map (
 			clk => clk,
 			rst_n => rst_n,
+			load => sop_s,
 			d => control,
 			q => control_latched_s
 		);
@@ -138,26 +153,15 @@ begin
 			d => old_sample_s,
 			q => old_old_sample_s
 		);
-	
-	LUT: LUT_rom_2 port map (
-			clka => clk,
-			addra => sampled_profiled_out_s,
-			douta => group_address_s
-		);
-	 
-	DebugRam: incRam
-		port map(	
-			init => debug_init,
-			addrb => debug_address,
-			doutb => debug_data,
-			read_b => debug_read,
-			ackb => debug_ack,
+		
+	tap_FF: D_FF
+		port map (
 			clk => clk,
 			rst_n => rst_n,
-			address => group_address_s(6 downto 0),
-			en => sop_s
-		);		 
-							
+			d => sop_s,
+			q => sofc_s
+		);
+		
 	combSOP: process(old_sample_s,old_old_sample_s)
 	begin
 		if ( old_old_sample_s = '0' and old_sample_s = '1') then
@@ -168,8 +172,29 @@ begin
 	end process;
 	
 	
+	Profiler_subsystem: profiler 
+		generic map ( bit_groups => bit_groups )
+		port map(
+			clk => clk,
+			rst_n => rst_n,
+			sos => sop_s,
+			data => sampled_profiled_out_s,
+			debug_init => debug_init,
+			debug_read => debug_read,
+			debug_ack  => debug_ack,
+			debug_data => debug_data,
+			debug_address => debug_address
+		);
 	
-	
-	
-end Behavioral;
+	Fault_Checker_subsystem: fault_checker 
+		port map (
+			dbus => 	data_latched_s,
+			abus => 	address_latched_s,
+			cbus => 	control_latched_s,
+			sos  =>  sofc_s,
+			ack  => 	fault_ack,
+			rst_n => rst_n,
+			fault => fault_detected	
+		);
 
+end Structural;
