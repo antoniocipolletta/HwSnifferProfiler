@@ -1,3 +1,5 @@
 xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.syr" 
 xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.syr" 
 xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo3/lapo/LAPO_toplevel.xst" -ofn "/home/brb/lapo3/lapo/LAPO_toplevel.syr" 
+xst -intstyle ise -ifn "/home/brb/lapo3/lapo/LAPO_toplevel.xst" -ofn "/home/brb/lapo3/lapo/LAPO_toplevel.syr" 

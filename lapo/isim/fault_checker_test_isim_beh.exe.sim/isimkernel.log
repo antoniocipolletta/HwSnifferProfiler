@@ -1,0 +1,30 @@
+Command line:
+   fault_checker_test_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  38000
+
+Mon Jan  9 11:16:04 2017
+
+
+ Elaboration Time: 0.19 sec
+
+ Current Memory Usage: 295.924 Meg
+
+ Total Signals          : 913
+ Total Nets             : 135194
+ Total Signal Drivers   : 469
+ Total Blocks           : 411
+ Total Primitive Blocks : 143
+ Total Processes        : 439
+ Total Traceable Variables  : 362
+ Total Scalar Nets and Variables : 137389
+Total Line Count : 1041
+Total Line Count : 1041
+
+ Total Simulation Time: 0.36 sec
+
+ Current Memory Usage: 371.479 Meg
+
+Mon Jan  9 11:16:43 2017
+

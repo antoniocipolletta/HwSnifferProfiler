@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-01-09T10:09:31</DateModified>
+  <DateModified>2017-01-09T11:03:36</DateModified>
   <ModuleName>LAPO_toplevel</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/iseconfig/LAPO_toplevel.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo</ImplementationReportsDirectory>
+  <SavedFilePath>/home/brb/lapo3/lapo/iseconfig/LAPO_toplevel.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/brb/lapo3/lapo/</ImplementationReportsDirectory>
   <DateInitialized>2017-01-09T10:09:31</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
