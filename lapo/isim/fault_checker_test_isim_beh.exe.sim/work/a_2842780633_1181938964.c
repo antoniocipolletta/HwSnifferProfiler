@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/brb/lapo3/lapo/MISR.vhd";
+static const char *ng0 = "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/MISR.vhd";
 extern char *IEEE_P_2592010699;
 
 unsigned char ieee_p_2592010699_sub_3488768497506413324_503743352(char *, unsigned char , unsigned char );

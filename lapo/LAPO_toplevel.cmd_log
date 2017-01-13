@@ -9,3 +9,4 @@ par -w -intstyle ise -ol high -mt off LAPO_toplevel_map.ncd LAPO_toplevel.ncd LA
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LAPO_toplevel.twx LAPO_toplevel.ncd -o LAPO_toplevel.twr LAPO_toplevel.pcf 
 netgen -intstyle ise -s 3  -pcf LAPO_toplevel.pcf -rpw 100 -tpw 0 -ar Structure -tm LAPO_toplevel -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim LAPO_toplevel.ncd LAPO_toplevel_timesim.vhd 
 netgen -intstyle ise -rpw 100 -tpw 0 -ar Structure -tm LAPO_toplevel -w -dir netgen/translate -ofmt vhdl -sim LAPO_toplevel.ngd LAPO_toplevel_translate.vhd 
+xst -intstyle ise -ifn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.xst" -ofn "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.syr" 

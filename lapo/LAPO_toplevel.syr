@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: LAPO_toplevel.prj
@@ -111,67 +111,67 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "/home/brb/lapo3/lapo/ipcore_dir/LUT_rom_2.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/ipcore_dir/LUT_rom_2.vhd" into library work
 Parsing entity <LUT_rom_2>.
 Parsing architecture <LUT_rom_2_a> of entity <lut_rom_2>.
-Parsing VHDL file "/home/brb/lapo3/lapo/mux2_parallelism.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/mux2_parallelism.vhd" into library work
 Parsing entity <mux2_parallelism>.
 Parsing architecture <Behavioral> of entity <mux2_parallelism>.
-Parsing VHDL file "/home/brb/lapo3/lapo/ipcore_dir/ram.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/ipcore_dir/ram.vhd" into library work
 Parsing entity <ram>.
 Parsing architecture <ram_a> of entity <ram>.
-Parsing VHDL file "/home/brb/lapo3/lapo/inc.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/inc.vhd" into library work
 Parsing entity <inc>.
 Parsing architecture <Behavioral> of entity <inc>.
-Parsing VHDL file "/home/brb/lapo3/lapo/down_timer.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_timer.vhd" into library work
 Parsing entity <down_timer>.
 Parsing architecture <Behavioral> of entity <down_timer>.
-Parsing VHDL file "/home/brb/lapo3/lapo/down_counter_genric.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter_genric.vhd" into library work
 Parsing entity <down_counter_generic>.
 Parsing architecture <Behavioral> of entity <down_counter_generic>.
-Parsing VHDL file "/home/brb/lapo3/lapo/D_FF.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/D_FF.vhd" into library work
 Parsing entity <D_FF>.
 Parsing architecture <Behavioral> of entity <d_ff>.
-Parsing VHDL file "/home/brb/lapo3/lapo/DP.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/DP.vhd" into library work
 Parsing entity <DP>.
 Parsing architecture <structural> of entity <dp>.
-Parsing VHDL file "/home/brb/lapo3/lapo/CU.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/CU.vhd" into library work
 Parsing entity <CU>.
 Parsing architecture <Behavioral> of entity <cu>.
-Parsing VHDL file "/home/brb/lapo3/lapo/controllerB.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/controllerB.vhd" into library work
 Parsing entity <controllerB>.
 Parsing architecture <Behavioral> of entity <controllerb>.
-Parsing VHDL file "/home/brb/lapo3/lapo/up_counter.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/up_counter.vhd" into library work
 Parsing entity <up_counter>.
 Parsing architecture <Behavioral> of entity <up_counter>.
-Parsing VHDL file "/home/brb/lapo3/lapo/MISR.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/MISR.vhd" into library work
 Parsing entity <MISR>.
 Parsing architecture <Structural> of entity <misr>.
-Parsing VHDL file "/home/brb/lapo3/lapo/incRam.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/incRam.vhd" into library work
 Parsing entity <incRam>.
 Parsing architecture <Behavioral> of entity <incram>.
-Parsing VHDL file "/home/brb/lapo3/lapo/golden_ROM.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/golden_ROM.vhd" into library work
 Parsing entity <golden_ROM>.
 Parsing architecture <golden_ROM_a> of entity <golden_rom>.
-Parsing VHDL file "/home/brb/lapo3/lapo/equality_comparator.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/equality_comparator.vhd" into library work
 Parsing entity <equality_comparator>.
 Parsing architecture <Behavioral> of entity <equality_comparator>.
-Parsing VHDL file "/home/brb/lapo3/lapo/down_counter.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter.vhd" into library work
 Parsing entity <down_counter>.
 Parsing architecture <Behavioral> of entity <down_counter>.
-Parsing VHDL file "/home/brb/lapo3/lapo/profiler.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.vhd" into library work
 Parsing entity <profiler>.
 Parsing architecture <Structural> of entity <profiler>.
-Parsing VHDL file "/home/brb/lapo3/lapo/load_reg_N.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_reg_N.vhd" into library work
 Parsing entity <load_reg_N>.
 Parsing architecture <Behavioral> of entity <load_reg_n>.
-Parsing VHDL file "/home/brb/lapo3/lapo/load_D_FF.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_D_FF.vhd" into library work
 Parsing entity <load_D_FF>.
 Parsing architecture <Behavioral> of entity <load_d_ff>.
-Parsing VHDL file "/home/brb/lapo3/lapo/fault_checker.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/fault_checker.vhd" into library work
 Parsing entity <fault_checker>.
 Parsing architecture <Structural> of entity <fault_checker>.
-Parsing VHDL file "/home/brb/lapo3/lapo/LAPO_toplevel.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd" into library work
 Parsing entity <LAPO_toplevel>.
 Parsing architecture <Structural> of entity <lapo_toplevel>.
 
@@ -208,10 +208,10 @@ Elaborating entity <down_timer> (architecture <Behavioral>) with generics from l
 Elaborating entity <inc> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <CU> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "/home/brb/lapo3/lapo/CU.vhd" Line 87. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/CU.vhd" Line 87. Case statement is complete. others clause is never selected
 
 Elaborating entity <controllerB> (architecture <Behavioral>) from library <work>.
-INFO:HDLCompiler:679 - "/home/brb/lapo3/lapo/controllerB.vhd" Line 75. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/controllerB.vhd" Line 75. Case statement is complete. others clause is never selected
 
 Elaborating entity <fault_checker> (architecture <Structural>) from library <work>.
 
@@ -230,7 +230,7 @@ Elaborating entity <equality_comparator> (architecture <Behavioral>) with generi
 =========================================================================
 
 Synthesizing Unit <LAPO_toplevel>.
-    Related source file is "/home/brb/lapo3/lapo/LAPO_toplevel.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd".
         data_dimension = 64
         address_dimension = 64
         bit_groups = 7
@@ -239,7 +239,7 @@ Synthesizing Unit <LAPO_toplevel>.
 Unit <LAPO_toplevel> synthesized.
 
 Synthesizing Unit <load_reg_N>.
-    Related source file is "/home/brb/lapo3/lapo/load_reg_N.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_reg_N.vhd".
         N = 64
     Found 64-bit register for signal <int_reg>.
     Summary:
@@ -247,35 +247,35 @@ Synthesizing Unit <load_reg_N>.
 Unit <load_reg_N> synthesized.
 
 Synthesizing Unit <load_D_FF>.
-    Related source file is "/home/brb/lapo3/lapo/load_D_FF.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_D_FF.vhd".
     Found 1-bit register for signal <int>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <load_D_FF> synthesized.
 
 Synthesizing Unit <D_FF>.
-    Related source file is "/home/brb/lapo3/lapo/D_FF.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/D_FF.vhd".
     Found 1-bit register for signal <int>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <D_FF> synthesized.
 
 Synthesizing Unit <profiler>.
-    Related source file is "/home/brb/lapo3/lapo/profiler.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.vhd".
         bit_groups = 7
     Summary:
 	no macro.
 Unit <profiler> synthesized.
 
 Synthesizing Unit <incRam>.
-    Related source file is "/home/brb/lapo3/lapo/incRam.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/incRam.vhd".
         bit_groups = 7
     Summary:
 	no macro.
 Unit <incRam> synthesized.
 
 Synthesizing Unit <DP>.
-    Related source file is "/home/brb/lapo3/lapo/DP.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/DP.vhd".
         bit_groups = 7
     Found 7-bit comparator equal for signal <cmp_addr_s> created at line 120
     Summary:
@@ -283,21 +283,21 @@ Synthesizing Unit <DP>.
 Unit <DP> synthesized.
 
 Synthesizing Unit <mux2_parallelism_1>.
-    Related source file is "/home/brb/lapo3/lapo/mux2_parallelism.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/mux2_parallelism.vhd".
         parallelism = 7
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <mux2_parallelism_1> synthesized.
 
 Synthesizing Unit <mux2_parallelism_2>.
-    Related source file is "/home/brb/lapo3/lapo/mux2_parallelism.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/mux2_parallelism.vhd".
         parallelism = 16
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <mux2_parallelism_2> synthesized.
 
 Synthesizing Unit <down_counter_generic>.
-    Related source file is "/home/brb/lapo3/lapo/down_counter_genric.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter_genric.vhd".
         parallelism = 7
     Found 7-bit register for signal <value>.
     Found 7-bit subtractor for signal <GND_18_o_GND_18_o_sub_3_OUT<6:0>> created at line 31.
@@ -307,7 +307,7 @@ Synthesizing Unit <down_counter_generic>.
 Unit <down_counter_generic> synthesized.
 
 Synthesizing Unit <down_timer>.
-    Related source file is "/home/brb/lapo3/lapo/down_timer.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_timer.vhd".
         parallelism = 3
     Found 3-bit register for signal <value>.
     Found 3-bit subtractor for signal <GND_20_o_GND_20_o_sub_2_OUT<2:0>> created at line 27.
@@ -317,14 +317,14 @@ Synthesizing Unit <down_timer>.
 Unit <down_timer> synthesized.
 
 Synthesizing Unit <inc>.
-    Related source file is "/home/brb/lapo3/lapo/inc.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/inc.vhd".
     Found 16-bit adder for signal <z> created at line 17.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <inc> synthesized.
 
 Synthesizing Unit <CU>.
-    Related source file is "/home/brb/lapo3/lapo/CU.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/CU.vhd".
     Found 2-bit register for signal <current_state>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
@@ -345,7 +345,7 @@ Synthesizing Unit <CU>.
 Unit <CU> synthesized.
 
 Synthesizing Unit <controllerB>.
-    Related source file is "/home/brb/lapo3/lapo/controllerB.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/controllerB.vhd".
     Found 2-bit register for signal <current_state>.
     Found finite state machine <FSM_1> for signal <current_state>.
     -----------------------------------------------------------------------
@@ -367,17 +367,18 @@ Synthesizing Unit <controllerB>.
 Unit <controllerB> synthesized.
 
 Synthesizing Unit <fault_checker>.
-    Related source file is "/home/brb/lapo3/lapo/fault_checker.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/fault_checker.vhd".
     Summary:
+	no macro.
 Unit <fault_checker> synthesized.
 
 Synthesizing Unit <MISR>.
-    Related source file is "/home/brb/lapo3/lapo/MISR.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/MISR.vhd".
     Summary:
 Unit <MISR> synthesized.
 
 Synthesizing Unit <down_counter>.
-    Related source file is "/home/brb/lapo3/lapo/down_counter.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter.vhd".
     Found 5-bit register for signal <count>.
     Found 5-bit subtractor for signal <count[4]_GND_27_o_mux_1_OUT> created at line 23.
     Summary:
@@ -386,7 +387,7 @@ Synthesizing Unit <down_counter>.
 Unit <down_counter> synthesized.
 
 Synthesizing Unit <up_counter>.
-    Related source file is "/home/brb/lapo3/lapo/up_counter.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/up_counter.vhd".
     Found 10-bit register for signal <count>.
     Found 10-bit adder for signal <count[9]_count[9]_mux_2_OUT> created at line 1241.
     Summary:
@@ -395,7 +396,7 @@ Synthesizing Unit <up_counter>.
 Unit <up_counter> synthesized.
 
 Synthesizing Unit <equality_comparator>.
-    Related source file is "/home/brb/lapo3/lapo/equality_comparator.vhd".
+    Related source file is "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/equality_comparator.vhd".
         N = 129
     Found 1-bit register for signal <eq_s>.
     Found 129-bit comparator not equal for signal <n0001> created at line 27
@@ -429,8 +430,8 @@ Macro Statistics
  16-bit 2-to-1 multiplexer                             : 1
  7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
-# Xors                                                 : 194
- 1-bit xor2                                            : 194
+# Xors                                                 : 193
+ 1-bit xor2                                            : 193
 
 =========================================================================
 
@@ -482,8 +483,8 @@ Macro Statistics
  16-bit 2-to-1 multiplexer                             : 1
  7-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 2
-# Xors                                                 : 194
- 1-bit xor2                                            : 194
+# Xors                                                 : 193
+ 1-bit xor2                                            : 193
 
 =========================================================================
 
@@ -622,14 +623,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Clock Signal                                                                  | Clock buffer(FF name)                                                                                                                                                   | Load  |
-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-clk                                                                           | BUFGP                                                                                                                                                                   | 148   |
-tap_FF/int                                                                    | BUFG                                                                                                                                                                    | 135   |
-Fault_Checker_subsystem/tc_s(Fault_Checker_subsystem/dwn_cnt/tc<4>1:O)        | NONE(*)(Fault_Checker_subsystem/up_cnt/count_0)                                                                                                                         | 10    |
-Fault_Checker_subsystem/rom_clk(Fault_Checker_subsystem/Mxor_rom_clk_xo<0>1:O)| NONE(*)(Fault_Checker_subsystem/gld_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
-------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                                          | Clock buffer(FF name)                                                                                                                                                   | Load  |
+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                                                   | BUFGP                                                                                                                                                                   | 148   |
+tap_FF/int                                                            | BUFG                                                                                                                                                                    | 135   |
+Fault_Checker_subsystem/tc_s(Fault_Checker_subsystem/dwn_cnt/tc<4>1:O)| NONE(*)(Fault_Checker_subsystem/up_cnt/count_0)                                                                                                                         | 10    |
+Fault_Checker_subsystem/rom_clk(Fault_Checker_subsystem/rom_clk1:O)   | NONE(*)(Fault_Checker_subsystem/gld_rom/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
+----------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 (*) These 2 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
@@ -760,7 +761,7 @@ Delay:               3.010ns (Levels of Logic = 45)
      MUXCY:CI->O           1   0.015   0.000  Fault_Checker_subsystem/eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<40> (Fault_Checker_subsystem/eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<40>)
      MUXCY:CI->O           1   0.015   0.000  Fault_Checker_subsystem/eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<41> (Fault_Checker_subsystem/eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<41>)
      MUXCY:CI->O           1   0.169   0.594  Fault_Checker_subsystem/eq_cmp/Mcompar_b[128]_a[128]_not_equal_0_o_cy<42> (Fault_Checker_subsystem/eq_cmp/b[128]_a[128]_not_equal_0_o)
-     LUT6:I0->O            1   0.053   0.279  Fault_Checker_subsystem/eq_cmp/en_b[128]_AND_11_o1 (Fault_Checker_subsystem/eq_cmp/en_b[128]_AND_11_o)
+     LUT6:I0->O            1   0.053   0.279  Fault_Checker_subsystem/eq_cmp/en_b[128]_AND_12_o1 (Fault_Checker_subsystem/eq_cmp/en_b[128]_AND_12_o)
      FDPE:CE                   0.149          Fault_Checker_subsystem/eq_cmp/eq_s
     ----------------------------------------
     Total                      3.010ns (1.538ns logic, 1.472ns route)
@@ -942,13 +943,13 @@ tap_FF/int     |    3.010|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.81 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 9.39 secs
  
 --> 
 
 
-Total memory usage is 432784 kilobytes
+Total memory usage is 432512 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

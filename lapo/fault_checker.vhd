@@ -64,7 +64,7 @@ BEGIN
 
 	sample_s <= cbus & dbus & abus;
 	ack_s <= ack OR (NOT(rst_n));
-	rom_clk <= tc_s XOR rst_n;
+	rom_clk <= not(tc_s) AND rst_n;
 	
 	misr_c: MISR PORT MAP  (d => sample_s,			
 									clk => sos,										

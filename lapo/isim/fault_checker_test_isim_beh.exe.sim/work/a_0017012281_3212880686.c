@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/brb/lapo3/lapo/down_counter.vhd";
+static const char *ng0 = "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter.vhd";
 extern char *IEEE_P_1242562249;
 
 char *ieee_p_1242562249_sub_1006216973935724872_1035706684(char *, char *, char *, char *, int );
@@ -111,7 +111,7 @@ LAB7:    t1 = (t0 + 992U);
 LAB10:    xsi_set_current_line(24, ng0);
     t5 = (t0 + 1672U);
     t7 = *((char **)t5);
-    t5 = (t0 + 5176U);
+    t5 = (t0 + 5520U);
     t8 = ieee_p_1242562249_sub_1006216973935724872_1035706684(IEEE_P_1242562249, t15, t7, t5, 1);
     t9 = (t15 + 12U);
     t16 = *((unsigned int *)t9);
@@ -159,8 +159,8 @@ static void work_a_0017012281_3212880686_p_1(char *t0)
 LAB0:    xsi_set_current_line(29, ng0);
     t1 = (t0 + 1672U);
     t2 = *((char **)t1);
-    t1 = (t0 + 5176U);
-    t3 = (t0 + 5208);
+    t1 = (t0 + 5520U);
+    t3 = (t0 + 5552);
     t6 = (t5 + 0U);
     t7 = (t6 + 0U);
     *((int *)t7) = 0;
