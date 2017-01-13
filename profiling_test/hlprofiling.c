@@ -9,7 +9,10 @@ int main(int argc, char** argv) {
     int data;
     int* debug_mem;
 
-
+    if ( argc != 4 ) {
+        printf("Usage %s with input_file, output_file, number of groups", argv[0]);
+        return -1; 
+    }
     fi = fopen(argv[1],"r");
     fo = fopen(argv[2],"w");
     n = atoi(argv[3]);

@@ -1,29 +1,66 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/brb/lapo3/lapo/fault_checker_test_isim_beh.exe -prj /home/brb/lapo3/lapo/fault_checker_test_beh.prj work.fault_checker_test 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib secureip -o /home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel_isim_beh.exe -prj /home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel_beh.prj work.test2_lapo_toplevel 
 ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 2
-Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/brb/lapo3/lapo/D_FF.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/up_counter.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/MISR.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/golden_ROM.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/equality_comparator.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/down_counter.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/fault_checker.vhd" into library work
-Parsing VHDL file "/home/brb/lapo3/lapo/fault_checker_test.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/ipcore_dir/LUT_rom_2.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/mux2_parallelism.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/ipcore_dir/ram.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/inc.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_timer.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter_genric.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/D_FF.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/DP.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/CU.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/controllerB.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/up_counter.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/MISR.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/incRam.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/golden_ROM.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/equality_comparator.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/down_counter.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/profiler.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_reg_N.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/load_D_FF.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/fault_checker.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.vhd" into library work
+Parsing VHDL file "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 117440 KB
-Fuse CPU Usage: 2160 ms
+Fuse Memory Usage: 134448 KB
+Fuse CPU Usage: 1580 ms
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package textio
 Compiling package std_logic_textio
 Compiling package numeric_std
+Compiling architecture behavioral of entity load_reg_N [\load_reg_N(64)\]
+Compiling architecture behavioral of entity load_D_FF [load_d_ff_default]
 Compiling architecture behavioral of entity D_FF [d_ff_default]
-Compiling architecture structural of entity MISR [misr_default]
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture lut_rom_2_a of entity LUT_rom_2 [lut_rom_2_default]
+Compiling package vcomponents
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture ram_a of entity ram [ram_default]
+Compiling architecture behavioral of entity mux2_parallelism [\mux2_parallelism(7)\]
+Compiling architecture behavioral of entity mux2_parallelism [\mux2_parallelism(16)\]
+Compiling architecture behavioral of entity down_counter_generic [\down_counter_generic(7)\]
+Compiling architecture behavioral of entity down_timer [\down_timer(3)\]
+Compiling architecture behavioral of entity inc [inc_default]
+Compiling architecture structural of entity DP [\DP(7)\]
+Compiling architecture behavioral of entity CU [cu_default]
+Compiling architecture behavioral of entity controllerB [controllerb_default]
+Compiling architecture behavioral of entity incRam [\incRam(7)\]
+Compiling architecture structural of entity profiler [\profiler(7)\]
+Compiling architecture structural of entity MISR [misr_default]
 Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
 Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
 Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
@@ -33,11 +70,12 @@ Compiling architecture behavioral of entity down_counter [down_counter_default]
 Compiling architecture behavioral of entity up_counter [up_counter_default]
 Compiling architecture behavioral of entity equality_comparator [\equality_comparator(129)\]
 Compiling architecture structural of entity fault_checker [fault_checker_default]
-Compiling architecture behavior of entity fault_checker_test
+Compiling architecture structural of entity LAPO_toplevel [\LAPO_toplevel(64,64,7)\]
+Compiling architecture behavior of entity test2_lapo_toplevel
 Time Resolution for simulation is 1ps.
-Waiting for 8 sub-compilation(s) to finish...
-Compiled 30 VHDL Units
-Built simulation executable /home/brb/lapo3/lapo/fault_checker_test_isim_beh.exe
-Fuse Memory Usage: 431104 KB
-Fuse CPU Usage: 2530 ms
-GCC CPU Usage: 1750 ms
+Waiting for 5 sub-compilation(s) to finish...
+Compiled 77 VHDL Units
+Built simulation executable /home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel_isim_beh.exe
+Fuse Memory Usage: 712780 KB
+Fuse CPU Usage: 2080 ms
+GCC CPU Usage: 3120 ms

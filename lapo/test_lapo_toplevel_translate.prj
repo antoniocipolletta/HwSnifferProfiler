@@ -1,0 +1,2 @@
+vhdl work "netgen/translate/LAPO_toplevel_translate.vhd"
+vhdl work "test_lapo_toplevel.vhd"

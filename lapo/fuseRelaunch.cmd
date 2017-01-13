@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "/home/brb/lapo3/lapo/fault_checker_test_isim_beh.exe" -prj "/home/brb/lapo3/lapo/fault_checker_test_beh.prj" "work.fault_checker_test" 
+-intstyle "ise" -incremental -lib "secureip" -o "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel_isim_beh.exe" -prj "/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/test2_lapo_toplevel_beh.prj" "work.test2_lapo_toplevel" 

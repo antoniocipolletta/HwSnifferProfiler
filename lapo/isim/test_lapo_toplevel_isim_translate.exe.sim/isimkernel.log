@@ -1,0 +1,29 @@
+Command line:
+   test_lapo_toplevel_isim_translate.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  40789
+
+Mon Jan  9 20:39:47 2017
+
+
+ Elaboration Time: 0.18 sec
+
+ Current Memory Usage: 257.106 Meg
+
+ Total Signals          : 11737
+ Total Nets             : 17965
+ Total Signal Drivers   : 8955
+ Total Blocks           : 3150
+ Total Primitive Blocks : 2325
+ Total Processes        : 8687
+ Total Traceable Variables  : 19977
+ Total Scalar Nets and Variables : 475271
+Total Line Count : 27097
+
+ Total Simulation Time: 0.48 sec
+
+ Current Memory Usage: 335.315 Meg
+
+Mon Jan  9 20:40:33 2017
+

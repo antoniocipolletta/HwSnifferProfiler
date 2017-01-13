@@ -1,0 +1,2 @@
+vhdl work "netgen/par/LAPO_toplevel_timesim.vhd"
+vhdl work "test_lapo_toplevel.vhd"

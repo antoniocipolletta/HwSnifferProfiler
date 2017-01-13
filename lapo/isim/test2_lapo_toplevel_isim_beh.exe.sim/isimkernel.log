@@ -1,0 +1,30 @@
+Command line:
+   test2_lapo_toplevel_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  35204
+
+Mon Jan  9 22:52:31 2017
+
+
+ Elaboration Time: 0.16 sec
+
+ Current Memory Usage: 300.765 Meg
+
+ Total Signals          : 1543
+ Total Nets             : 139622
+ Total Signal Drivers   : 639
+ Total Blocks           : 453
+ Total Primitive Blocks : 167
+ Total Processes        : 552
+ Total Traceable Variables  : 800
+ Total Scalar Nets and Variables : 142745
+Total Line Count : 1844
+Total Line Count : 1844
+
+ Total Simulation Time: 0.57 sec
+
+ Current Memory Usage: 377.315 Meg
+
+Tue Jan 10 00:32:52 2017
+

@@ -1,4 +1,5 @@
-/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/incRam/LAPO.ngc 1483817221
-ipcore_dir/LUT_rom_2.ngc 1483797087
-ipcore_dir/ram.ngc 1483796212
+/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/LAPO_toplevel.ngc 1483978014
+ipcore_dir/LUT_rom_2.ngc 1483950198
+ipcore_dir/ram.ngc 1483950198
+/home/cipolletta/Documenti/SSDS/assignment_gamma/lapo/lapo/golden_ROM.ngc 1483978014
 OK

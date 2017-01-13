@@ -1,0 +1,31 @@
+Command line:
+   test_lapo_toplevel_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/LAPO_toplevel_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  36534
+
+Mon Jan  9 20:47:23 2017
+
+
+ Elaboration Time: 0.25 sec
+
+ Current Memory Usage: 275.476 Meg
+
+ Total Signals          : 17076
+ Total Nets             : 21844
+ Total Signal Drivers   : 11024
+ Total Blocks           : 4316
+ Total Primitive Blocks : 2960
+ Total Processes        : 10738
+ Total Traceable Variables  : 24848
+ Total Scalar Nets and Variables : 517671
+Total Line Count : 35330
+
+ Total Simulation Time: 0.81 sec
+
+ Current Memory Usage: 355.578 Meg
+
+Mon Jan  9 20:47:36 2017
+
